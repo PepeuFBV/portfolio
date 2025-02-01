@@ -1,4 +1,4 @@
-let currentLanguage = 'en'; // TODO: update to get on localStorage/cookies
+let currentLanguage = 'en' // TODO: update to get on localStorage/cookies
 
 function setLanguage(language: string) {
   if (language === 'en' || language === 'pt') {
@@ -12,4 +12,8 @@ function getLanguage() {
   return currentLanguage;
 }
 
-export { setLanguage, getLanguage, currentLanguage }
+function getLanguagePos() {
+  return currentLanguage === 'en' ? 0 : 1;
+}
+
+export { setLanguage, getLanguage, currentLanguage, getLanguagePos }
