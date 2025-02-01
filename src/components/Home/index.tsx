@@ -52,10 +52,29 @@ const Home = () => {
                 </motion.p>
             </motion.div>
             <div className='flex flex-col items-center gap-4'>
-                <h1 className='text-3xl font-bold'>{data.title[languagePos]}</h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className='text-3xl font-bold'
+                >
+                    {data.title[languagePos]}
+                </motion.h1>
                 <div className='flex flex-col gap-2 text-center'>
-                    <p>{data.description1[languagePos]}</p>
-                    <p>{data.description2[languagePos]}</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 1 }}
+                    >
+                        {data.description1[languagePos]}
+                    </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 1.25 }}
+                    >
+                        {data.description2[languagePos]}
+                    </motion.p>
                 </div>
             </div>
         </section>
