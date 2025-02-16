@@ -1,6 +1,7 @@
 import React from 'react'
 import { Home } from '@/components/core/Home'
 import { AboutMe } from '@/components/core/AboutMe'
+import { Footer } from '@/components/core/Footer'
 
 export default function Main() {
     return (
@@ -12,9 +13,7 @@ export default function Main() {
                 <AboutMe />
                 <AboutMe />
                 <AboutMe />
-                <div className='w-full'>
-                    <p>footer</p>
-                </div>
+                <Footer className='w-full' />
             </div>
         </main>
     )
