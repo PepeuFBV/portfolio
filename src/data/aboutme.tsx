@@ -1,6 +1,16 @@
 import { ReactNode } from 'react'
 
-const aboutme: { name: string, role: string[], smallDescription: ReactNode[], description1: ReactNode[], description2: ReactNode[] } = {
+type AboutMeContent = {
+    name: string,
+    role: string[],
+    smallDescription: ReactNode[],
+    descriptionTitle: string[],
+    description1: ReactNode[],
+    description2: ReactNode[],
+    description3: ReactNode[],
+    descriptionExtra: ReactNode[]
+}
+const aboutme: AboutMeContent = {
     name: "Pedro Figueira",
     role: [
         'Junior Developer',
@@ -13,6 +23,10 @@ const aboutme: { name: string, role: string[], smallDescription: ReactNode[], de
         <>
             Construindo soluções eficientes e escaláveis para atender às necessidades do negócio.
         </>
+    ],
+    descriptionTitle: [
+        'About me',
+        'Sobre mim'
     ],
     description1: [
         <>
@@ -28,6 +42,22 @@ const aboutme: { name: string, role: string[], smallDescription: ReactNode[], de
         </>,
         <>
             Experiente em metodologias ágeis como Scrum, valorizando a colaboração em equipe e a <b>entrega contínua</b> de valor. Com foco em boas práticas de desenvolvimento, aliando conhecimento técnico e uma abordagem prática para criar soluções que atendem às necessidades do negócio de forma <b>ágil</b> e <b>eficaz</b>.
+        </>
+    ],
+    description3: [
+        <>
+            Currently, I'm working as a fullstack software developer and researcher at <a className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' href="https://www.cefetmg.br/" target="_blank" rel="noreferrer">SmartRural</a>, developing a real-time monitoring system for IoT devices in the aquiculture sector.
+        </>,
+        <>
+            Atualmente, estou trabalhando como desenvolvedor de software fullstack e pesquisador na <a className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' href="https://www.cefetmg.br/" target="_blank" rel="noreferrer">SmartRural</a>, desenvolvendo um sistema de monitoramento em tempo real para dispositivos IoT no setor de aquicultura.
+        </>
+    ],
+    descriptionExtra: [
+        <>
+            I'm always looking for new challenges and opportunities to learn and improve my skills. I love learing new languages, frameworks and tools to create better solutions and improve my knowledge. Currently learning <b>Rust</b> and <b>Golang</b>.
+        </>,
+        <>
+            Estou sempre em busca de novos desafios e oportunidades para aprender e aprimorar minhas habilidades. Adoro aprender novas linguagens, frameworks e ferramentas para criar soluções melhores e aprimorar meu conhecimento. Atualmente aprendendo <b>Rust</b> e <b>Golang</b>.
         </>
     ]
 }
