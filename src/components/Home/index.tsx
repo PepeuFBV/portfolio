@@ -34,7 +34,7 @@ const Home = () => {
     const languagePos = getLanguagePos()
 
     return (
-        <section className='grid grid-cols-2 place-items-center w-[80%] h-full'>
+        <section className='flex flex-col place-items-center w-full h-full'>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}

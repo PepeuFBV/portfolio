@@ -1,4 +1,4 @@
-import { twMerge } from 'tailwind-merge';
+import { twMerge } from 'tailwind-merge'
 
 interface HeaderBtnProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
     children: React.ReactNode;
@@ -18,6 +18,6 @@ const HeaderBtn: React.FC<HeaderBtnProps> = ({ children, className, key, ref, ..
             {children}
         </a>
     );
-};
+}
 
-export default HeaderBtn;
+export default HeaderBtn
