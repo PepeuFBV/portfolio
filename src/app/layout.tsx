@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getLanguagePos } from '@/utils/language-handler'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 
@@ -14,8 +15,10 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const languagePos = getLanguagePos()
+
     return (
-        <html lang="pt-br">
+        <html lang={languagePos === 0 ? 'pt-br' : 'en-us'}>
             <body className={poppins.className}>
                 {children}
             </body>
