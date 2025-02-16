@@ -20,7 +20,7 @@ const Home: React.FC<HomeProps> = ({ className }) => {
                 <div className='w-full flex flex-col gap-5 lg:gap-10'>
                     <div className='flex gap-6 items-center justify-start'>
                         <Image src="/pedro.jpg" alt="Logo" width={150} height={150} loading='eager' quality={100} className='rounded-full float-left' />
-                        <div className='flex flex-col gap-2'>
+                        <div className='flex flex-col gap-2 w-full lg:w-1/2'>
                             <motion.h1
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}

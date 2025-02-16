@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 const INITIAL_DELAY = 0.0
 const DELAY_MULTIPLIER = 0.2
-const ICON_SIZE = 36
+const ICON_SIZE = 32
 
 const Icons = () => {
     let iterator: number = 0 // icons iterator

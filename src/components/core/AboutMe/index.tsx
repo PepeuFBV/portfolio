@@ -13,7 +13,7 @@ const AboutMe = () => {
     let iterator: number = 0
 
     return (
-        <div className='flex flex-col gap-8'>
+        <div className='flex flex-col gap-6'>
             <h2 className='text-base font-bold uppercase'>{aboutme.descriptionTitle[languagePos]}</h2>
             <div className='flex flex-col gap-4 text-left lg:text-justify'>
                 <motion.p
