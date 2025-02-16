@@ -33,7 +33,7 @@ const Home = () => {
                             </motion.p>
                         </div>
                     </div>
-                    <p className='text-center font-light text-base'>
+                    <p className='text-start font-extralight text-base w-[66%]'>
                         {aboutme.smallDescription[languagePos]}
                     </p>
                 </div>

@@ -8,10 +8,10 @@ const aboutme: { name: string, role: string[], smallDescription: ReactNode[], de
     ],
     smallDescription: [
         <>
-            Sou um profissional com experiência no desenvolvimento de APIs, integração de sistemas, bancos de dados e criação de sistemas web. Trabalhando com arquiteturas escaláveis e eficientes, garantindo soluções seguras e de alta performance. Aliando conhecimento técnico e uma abordagem prática para criar soluções que atendem às necessidades do negócio de forma ágil e eficaz.
+            Building efficient and scalable solutions to meet business needs.
         </>,
         <>
-            I am a developer with experience in the development of APIs, system integration, databases and web systems creation. Working with scalable and efficient architectures, ensuring secure and high-performance solutions.Combining technical knowledge and a practical approach to create solutions that meet business needs in an agile and effective way.
+            Construindo soluções eficientes e escaláveis para atender às necessidades do negócio.
         </>
     ],
     description1: [
