@@ -1,8 +1,8 @@
 'use client'
 
-import { Github } from '@/components/icons/github'
-import { Linkedin } from '@/components/icons/linkedin'
-import { Curriculum } from '@/components/icons/curriculum'
+import { Github } from '@/components/core/Icons/components/github'
+import { Linkedin } from '@/components/core/Icons/components/linkedin'
+import { Curriculum } from '@/components/core/Icons/components/curriculum'
 import { motion } from 'framer-motion'
 
 const INITIAL_DELAY = 0.0

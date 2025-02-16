@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Icons } from '@/components/Home/icons'
+import { Icons } from '@/components/core/Icons/icons'
 import { aboutme } from '@/data/aboutme'
 import { getLanguagePos } from '@/utils/language-handler'
 import * as motion from 'motion/react-client'
