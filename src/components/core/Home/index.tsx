@@ -1,15 +1,21 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import { Icons } from '@/components/core/Icons'
 import { aboutme } from '@/data/aboutme'
 import { getLanguagePos } from '@/utils/language-handler'
-import * as motion from 'motion/react-client'
+import { cn } from '@/utils/tailwind-merge'
+import { motion } from 'framer-motion'
 
-const Home = () => {
+interface HomeProps {
+    className?: string
+}
+const Home: React.FC<HomeProps> = ({ className }) => {
     const languagePos = getLanguagePos()
 
     return (
-        <section className='flex flex-col place-items-center w-full h-full justify-between'>
+        <section className={cn('flex flex-col w-full h-full justify-between', className)}>
             <div className='flex flex-col gap-16'>
                 <div className='w-full flex flex-col gap-10'>
                     <div className='flex gap-6 items-center justify-start'>
@@ -46,4 +52,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export { Home }
