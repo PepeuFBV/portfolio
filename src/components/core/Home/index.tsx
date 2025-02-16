@@ -15,9 +15,9 @@ const Home: React.FC<HomeProps> = ({ className }) => {
     const languagePos = getLanguagePos()
 
     return (
-        <section className={cn('flex flex-col w-full h-full justify-between', className)}>
+        <section className={cn('flex flex-col w-full h-full justify-between gap-8 lg:gap-0', className)}>
             <div className='flex flex-col gap-16'>
-                <div className='w-full flex flex-col gap-10'>
+                <div className='w-full flex flex-col gap-5 lg:gap-10'>
                     <div className='flex gap-6 items-center justify-start'>
                         <Image src="/pedro.jpg" alt="Logo" width={150} height={150} loading='eager' quality={100} className='rounded-full float-left' />
                         <div className='flex flex-col gap-2'>
@@ -43,7 +43,7 @@ const Home: React.FC<HomeProps> = ({ className }) => {
                         {aboutme.smallDescription[languagePos]}
                     </p>
                 </div>
-                <div>
+                <div className='lg:visible hidden'>
                     <p>todo: index</p>
                 </div>
             </div>
