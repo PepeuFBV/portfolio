@@ -12,18 +12,17 @@ type MonthYear = {
 type DateRange = { // for date range, if end is null, it means it's still ongoing
     start: MonthYear | null;
     end: MonthYear | null;
-}
-
-type Date = { // for single date
-    date: MonthYear | null;
+    singleDate?: boolean; // if true, it's a single date, if false, it's a date range
 }
 
 type Job = { // array for multiple languages
     title: string[];
     company: string[];
     companyLink: string | null;
+    projectLink: string | null;
     description: string[];
-    date: DateRange | Date | null;
+    date: DateRange | null;
+    tags?: string[][];
 }
 
-export type { Project, Job }
+export type { Project, Job, DateRange }

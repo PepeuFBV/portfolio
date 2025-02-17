@@ -1,6 +1,7 @@
 import React from 'react'
 import { Home } from '@/components/core/Home'
 import { AboutMe } from '@/components/core/AboutMe'
+import { Experience } from '@/components/core/Experience'
 import { Footer } from '@/components/core/Footer'
 
 export default function Main() {
@@ -11,8 +12,7 @@ export default function Main() {
             </div>
             <div className="lg:w-1/2 mx-8 lg:ml-auto h-full flex flex-col gap-20 lg:mt-40 scroll-my-10">
                 <AboutMe />
-                <AboutMe />
-                <AboutMe />
+                <Experience />
                 <Footer className='w-full' />
             </div>
         </main>
