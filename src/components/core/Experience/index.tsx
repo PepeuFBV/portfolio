@@ -43,7 +43,7 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePo
                 {experience.title[languagePos]}
             </motion.h2>
             {experience.jobs.map((job, index) => (
-                <Job key={index} job={job} DELAY={INITIAL_DELAY + index * DELAY_MULTIPLIER} languagePos={languagePos} />
+                <Job job={job} DELAY={INITIAL_DELAY + index * DELAY_MULTIPLIER} languagePos={languagePos} />
             ))}
         </section>
     )
