@@ -201,8 +201,8 @@ const experience: ExperienceContent =  {
                 end: null
             },
             tags: [
-                ['Digital Marketing', 'Content Creation', 'Social Media', 'SEO', 'Analytics', 'Client Prospecting'],
-                ['Marketing Digital', 'Criação de Conteúdo', 'Redes Sociais', 'SEO', 'Análise de Dados', 'Prospecção de Clientes']
+                ['Digital Marketing', 'Social Media', 'Analytics', 'Client Prospecting'],
+                ['Marketing Digital', 'Redes Sociais', 'Análise de Dados', 'Prospecção de Clientes']
             ]
         }
     ]
