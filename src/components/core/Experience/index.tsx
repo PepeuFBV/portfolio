@@ -3,17 +3,15 @@
 import React, { useState, useEffect } from 'react'
 import { Job } from '@/components/core/Experience/Job'
 import { experience as initialExperience } from '@/data/experience'
-import { getLanguagePos } from '@/utils/language-handler'
 import { motion } from 'framer-motion'
 
 const DELAY_MULTIPLIER = 0.45
 
 interface ExperienceProps {
     INITIAL_DELAY?: number
+    languagePos?: number
 }
-const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0 }) => {
-    const languagePos = getLanguagePos()
-
+const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePos = 0 }) => {
     const [experience, setExperience] = useState(initialExperience)
 
     useEffect(() => {
@@ -36,6 +34,7 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0 }) => {
     return (
         <section className='flex flex-col gap-8'>
             <motion.h2
+                key={`experience` + languagePos}
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: INITIAL_DELAY }}
@@ -44,7 +43,7 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0 }) => {
                 {experience.title[languagePos]}
             </motion.h2>
             {experience.jobs.map((job, index) => (
-                <Job key={index} job={job} DELAY={INITIAL_DELAY + index * DELAY_MULTIPLIER} />
+                <Job key={index} job={job} DELAY={INITIAL_DELAY + index * DELAY_MULTIPLIER} languagePos={languagePos} />
             ))}
         </section>
     )
