@@ -15,7 +15,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
     return (
         <section className={cn('flex flex-col w-full h-full justify-between gap-8 lg:gap-0', className)}>
             <div className='flex flex-col gap-16'>
-                <div className='lg:w-full flex flex-col gap-5 lg:gap-10'>
+                <div className='w-[28rem] md:w-[36rem] lg:w-full flex flex-col gap-5 lg:gap-10'>
                     <div className='flex gap-6 items-center justify-start'>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
