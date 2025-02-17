@@ -4,7 +4,6 @@ import React from 'react'
 import { Link } from '@/components/core/Icons/components/link'
 import { Dates } from '@/components/core/Experience/Job/Dates'
 import type { Job } from '@/types/types'
-import { getLanguagePos } from '@/utils/language-handler'
 import { motion } from 'framer-motion'
 import '@/components/core/Experience/Job/truncate-desc.css'
 
@@ -12,15 +11,14 @@ interface JobProps {
     key: number
     job: Job
     DELAY?: number
+    languagePos?: number
 }
-const Job: React.FC<JobProps> = ({ key, job, DELAY = 0.0 }) => {
-    const languagePos = getLanguagePos()
-
+const Job: React.FC<JobProps> = ({ key, job, DELAY = 0.0, languagePos = 0 }) => {
     const orderedTags: string[] = job.tags ? job.tags[languagePos].sort((a, b) => a.localeCompare(b)) : []
 
     return (
         <motion.div
-            key={key}
+            key={key + `Job` + languagePos}
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: DELAY }}

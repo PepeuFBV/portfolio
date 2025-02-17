@@ -4,16 +4,14 @@ import React from 'react'
 import Image from 'next/image'
 import { Icons } from '@/components/core/Icons'
 import { aboutme } from '@/data/aboutme'
-import { getLanguagePos, setLanguage } from '@/utils/language-handler'
 import { cn } from '@/utils/tailwind-merge'
 import { motion } from 'framer-motion'
 
 interface HomeProps {
     className?: string
+    languagePos?: number
 }
-const Home: React.FC<HomeProps> = ({ className }) => {
-    const languagePos = getLanguagePos()
-
+const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
     return (
         <section className={cn('flex flex-col w-full h-full justify-between gap-8 lg:gap-0', className)}>
             <div className='flex flex-col gap-16'>
@@ -36,6 +34,7 @@ const Home: React.FC<HomeProps> = ({ className }) => {
                                 {aboutme.name}
                             </motion.h1>
                             <motion.p
+                                key={`role-${languagePos}`}
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 1 }}
@@ -46,6 +45,7 @@ const Home: React.FC<HomeProps> = ({ className }) => {
                         </div>
                     </div>
                     <motion.p
+                        key={`description-${languagePos}`}
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 1.3 }}
