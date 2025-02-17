@@ -82,7 +82,7 @@ const experience: ExperienceContent =  {
             companyLink: 'https://plataformasabia.com',
             projectLink: null,
             description: [
-                'Winner of Hackathon das Rotas, promoted by Instituto Sábia, in which an innovative solution was designed, containing AI, for the \'Caminho do Mel\' (problems in the beekeeping).',
+                'Winner of Hackathon das Rotas promoted by Instituto Sábia, in which an innovative solution containing AI was designed, for the \'Caminho do Mel\' (problems in the beekeeping).',
                 'Vencedor de Hackathon das Rotas, promovido pelo Instituto Sábia, em que foi idealizada, em uma semana, uma solução inovadora, em que haja o uso de IA, para o \'Caminho do Mel\' (problemas na área da apicultura).'
             ],
             date: {
@@ -162,7 +162,7 @@ const experience: ExperienceContent =  {
             companyLink: null,
             projectLink: 'https://github.com/PepeuFBV/react-para-iniciantes',
             description: [
-                'Mini-course teacher on ReactJS for Computer Science students at UFERSA, in which I developed skills in public speaking and teaching skills, as well as, deep learning about the technology.',
+                'Mini-course teacher on ReactJS for Computer Science students at UFERSA, in which I developed skills in public speaking and teaching skills, as well as deep learning about the technology.',
                 'Ministrei minicurso sobre ReactJS para alunos do curso de Ciência da Computação da UFERSA, em que desenvolvi habilidades de oratória, de ensino e aprendizado aprofundado sobre a tecnologia.'
             ],
             date: {

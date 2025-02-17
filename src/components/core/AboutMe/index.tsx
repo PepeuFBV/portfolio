@@ -1,20 +1,30 @@
 'use client'
 
+import React from 'react'
 import { aboutme } from '@/data/aboutme'
 import { getLanguagePos } from '@/utils/language-handler'
 import { motion } from 'framer-motion'
 
-const INITIAL_DELAY = 0.75
 const DELAY_MULTIPLIER = 0.2
 
-const AboutMe = () => {
+interface AboutMeProps {
+    INITIAL_DELAY?: number
+}
+const AboutMe: React.FC<AboutMeProps> = ({ INITIAL_DELAY = 0.0 }) => {
     const languagePos = getLanguagePos()
 
     let iterator: number = 0
 
     return (
         <section className='flex flex-col gap-8'>
-            <h2 className='text-base font-bold uppercase'>{aboutme.descriptionTitle[languagePos]}</h2>
+            <motion.h2
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.2 }}
+                className='text-base font-bold uppercase'
+            >
+                {aboutme.descriptionTitle[languagePos]}
+            </motion.h2>
             <div className='flex flex-col gap-4 text-left lg:text-justify'>
                 <motion.p
                     initial={{ opacity: 0, y: 50 }}

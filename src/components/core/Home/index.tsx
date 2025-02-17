@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Icons } from '@/components/core/Icons'
 import { aboutme } from '@/data/aboutme'
-import { getLanguagePos } from '@/utils/language-handler'
+import { getLanguagePos, setLanguage } from '@/utils/language-handler'
 import { cn } from '@/utils/tailwind-merge'
 import { motion } from 'framer-motion'
 
@@ -19,7 +19,13 @@ const Home: React.FC<HomeProps> = ({ className }) => {
             <div className='flex flex-col gap-16'>
                 <div className='w-full flex flex-col gap-5 lg:gap-10'>
                     <div className='flex gap-6 items-center justify-start'>
-                        <Image src="/pedro.jpg" alt="Logo" width={150} height={150} loading='eager' quality={100} className='rounded-full float-left' />
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: 0 }}
+                        >
+                            <Image src="/pedro.jpg" alt="Logo" width={150} height={150} loading='eager' quality={100} className='rounded-full float-left' />
+                        </motion.div>
                         <div className='flex flex-col gap-2 w-full lg:w-1/2'>
                             <motion.h1
                                 initial={{ opacity: 0, y: 50 }}
@@ -33,17 +39,22 @@ const Home: React.FC<HomeProps> = ({ className }) => {
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 1 }}
-                                className='font-light text-lg'
+                                className='font-extralight text-lg text-zinc-400'
                             >
                                 {aboutme.role[languagePos]}
                             </motion.p>
                         </div>
                     </div>
-                    <p className='text-start font-extralight text-base w-[66%]'>
+                    <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 1.3 }}
+                        className='text-start font-extralight text-md w-[66%]'
+                    >
                         {aboutme.smallDescription[languagePos]}
-                    </p>
+                    </motion.p>
                 </div>
-                <div className='lg:visible hidden'>
+                <div className='md:visible hidden'>
                     <p>todo: index</p>
                 </div>
             </div>

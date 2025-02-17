@@ -1,21 +1,31 @@
+'use client'
+
 import React from 'react'
 import { Link } from '@/components/core/Icons/components/link'
 import { Dates } from '@/components/core/Experience/Job/Dates'
 import type { Job } from '@/types/types'
 import { getLanguagePos } from '@/utils/language-handler'
+import { motion } from 'framer-motion'
 import '@/components/core/Experience/Job/truncate-desc.css'
 
 interface JobProps {
     key: number
     job: Job
+    DELAY?: number
 }
-const Job: React.FC<JobProps> = ({ key, job }) => {
+const Job: React.FC<JobProps> = ({ key, job, DELAY = 0.0 }) => {
     const languagePos = getLanguagePos()
 
     const orderedTags: string[] = job.tags ? job.tags[languagePos].sort((a, b) => a.localeCompare(b)) : []
 
     return (
-        <div key={key} className='flex flex-row gap-3 hover:bg-slate-900 hover:bg-opacity-15 hover:shadow p-3 rounded-xl h-40'>
+        <motion.div
+            key={key}
+            initial={{ opacity: 0, x: -15 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: DELAY }}
+            className='flex flex-row gap-3 hover:bg-slate-900 hover:bg-opacity-15 hover:shadow p-3 rounded-xl h-40'
+        >
             <Dates dates={job.date} />
             <div className='flex flex-col justify-between mb-1 w-full'>
                 <div className='flex flex-col gap-3'>
@@ -65,7 +75,7 @@ const Job: React.FC<JobProps> = ({ key, job }) => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

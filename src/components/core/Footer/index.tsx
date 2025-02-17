@@ -1,19 +1,34 @@
+'use client'
+
 import React from 'react'
-import '@/components/core/Footer/loading.css'
+import { motion } from 'framer-motion'
 import { cn } from '@/utils/tailwind-merge'
+import '@/components/core/Footer/loading.css'
 
 interface FooterProps {
     className?: string
+    INITIAL_DELAY?: number
 }
-const Footer: React.FC<FooterProps> = ({ className }) => {
+const Footer: React.FC<FooterProps> = ({ className, INITIAL_DELAY }) => {
     return (
         <footer className={cn('flex flex-row justify-between gap-4 pb-12', className)}>
-            <div className='text-start text-sm text-zinc-500'>
+            <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: INITIAL_DELAY }}
+                className='text-start text-sm text-zinc-500'
+            >
                 <p>Deployed in Vercel.</p>
                 <p>Designed with Figma, built in NextJS with React, Typescript and TailwindCSS.</p>
                 <p>Poppings is the font.</p>
-            </div>
-            <div className='loader'></div>
+            </motion.div>
+            <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: INITIAL_DELAY }}
+                className='loader'
+            >
+            </motion.div>
         </footer>
     )
 }
