@@ -18,9 +18,9 @@ const Footer: React.FC<FooterProps> = ({ className, INITIAL_DELAY }) => {
                 transition={{ duration: 0.7, delay: INITIAL_DELAY }}
                 className='text-start text-sm text-zinc-500'
             >
-                <p>Deployed in Vercel.</p>
-                <p>Designed with Figma, built in NextJS with React, Typescript and TailwindCSS.</p>
-                <p>Poppings is the font.</p>
+                <p>Deployed in <span className='text-white'>Vercel</span>.</p>
+                <p>Designed with <span className='text-white'>Figma</span>, built in <span className='text-white'>NextJS</span> with <span className='text-white'>React</span>, <span className='text-white'>Typescript</span> and <span className='text-white'>TailwindCSS</span>.</p>
+                <p><span className='text-white'>Poppings</span> is the font.</p>
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 25 }}
