@@ -8,8 +8,8 @@ const INITIAL_DELAY = 0.02
 
 export default function Main() {
     return (
-        <main className="flex flex-col lg:flex-row h-screen w-full items-center lg:px-20 xl:px-32 py-36 gap-36">
-            <div className='lg:fixed h-full lg:py-16 mx-5 lg:mx-0'>
+        <main className="flex flex-col lg:flex-row h-screen w-full items-center lg:px-20 xl:px-32 py-20 lg:py-36 gap-36">
+            <div className='lg:fixed h-full lg:pb-16 lg:pt-32 mx-5 lg:mx-0'>
                 <Home className='h-full' />
             </div>
             <div className="lg:w-1/2 mx-8 lg:ml-auto h-full flex flex-col gap-20 lg:mt-40 scroll-my-10">

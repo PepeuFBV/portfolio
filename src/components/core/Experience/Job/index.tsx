@@ -24,7 +24,7 @@ const Job: React.FC<JobProps> = ({ key, job, DELAY = 0.0 }) => {
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: DELAY }}
-            className='flex flex-row gap-3 hover:bg-slate-900 hover:bg-opacity-15 hover:shadow p-3 rounded-xl h-40'
+            className='flex flex-col lg:flex-row gap-3 hover:bg-slate-900 hover:bg-opacity-15 hover:shadow p-3 rounded-xl h-40'
         >
             <Dates dates={job.date} />
             <div className='flex flex-col justify-between mb-1 w-full'>
