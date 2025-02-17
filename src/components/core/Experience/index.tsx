@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { Job } from '@/components/core/Experience/Job'
+import { Link } from '@/components/core/Icons/components/link'
 import { experience as initialExperience } from '@/data/experience'
 import { motion } from 'framer-motion'
 
@@ -31,6 +32,11 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePo
         })
     }
 
+    const viewAll: string[] = [
+        'See full curriculum',
+        'Ver currículo completo'
+    ]
+
     return (
         <section className='flex flex-col gap-8'>
             <motion.h2
@@ -43,8 +49,23 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePo
                 {experience.title[languagePos]}
             </motion.h2>
             {experience.jobs.map((job, index) => (
-                <Job job={job} DELAY={INITIAL_DELAY + index * DELAY_MULTIPLIER} languagePos={languagePos} />
+                <Job key={job.id} job={job} DELAY={INITIAL_DELAY + index * DELAY_MULTIPLIER} languagePos={languagePos} />
             ))}
+            <motion.a
+                key={`see-all` + languagePos}
+                initial={{ opacity: 0, y: -30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: INITIAL_DELAY + experience.jobs.length * DELAY_MULTIPLIER }}
+                className='w-fit flex gap-1'
+                href={`/files/pedro-${languagePos === 0 ? 'en' : 'pt'}.pdf`}
+                target='_blank'
+                rel='noreferrer'
+            >
+                <p className='text-sm font-normal underline cursor-pointer'>
+                    {viewAll[languagePos]}
+                </p>
+                <Link size={12} />
+            </motion.a>
         </section>
     )
 }

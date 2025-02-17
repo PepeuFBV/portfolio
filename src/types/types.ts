@@ -16,6 +16,7 @@ type DateRange = { // for date range, if end is null, it means it's still ongoin
 }
 
 type Job = { // array for multiple languages
+    id: number;
     title: string[];
     company: string[];
     companyLink: string | null;

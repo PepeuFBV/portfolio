@@ -11,6 +11,7 @@ const experience: ExperienceContent =  {
     ],
     jobs: [ // TODO: adicionar certificados
         {
+            id: 0,
             title: [
                 'Extension Team Leader',
                 'Líder de Equipe de Extensão'
@@ -41,6 +42,7 @@ const experience: ExperienceContent =  {
             ]
         },
         {
+            id: 1,
             title: [
                 'Hackatruck Student',
                 'Aluno do Hackatruck'
@@ -71,6 +73,7 @@ const experience: ExperienceContent =  {
             ]
         },
         {
+            id: 2,
             title: [
                 'Hackathon Winner',
                 'Vencedor de Hackathon'
@@ -99,6 +102,7 @@ const experience: ExperienceContent =  {
             ]
         },
         {
+            id: 3,
             title: [
                 'Undergraduate Research in Startup',
                 'Iniciação Científica em Startup'
@@ -126,6 +130,7 @@ const experience: ExperienceContent =  {
             ]
         },
         // {
+        //     id: 4,
         //     title: [
         //         'President Director of Junior Company',
         //         'Diretor Presidente de Empresa Júnior'
@@ -151,6 +156,7 @@ const experience: ExperienceContent =  {
         //     }
         // },
         {
+            id: 5,
             title: [
                 'ReactJS Mini-Course Instructor',
                 'Ministrante de minicurso sobre ReactJS'
@@ -179,6 +185,7 @@ const experience: ExperienceContent =  {
             ]
         },
         {
+            id: 6,
             title: [
                 'Marketing Analyst',
                 'Analista de Marketing'
