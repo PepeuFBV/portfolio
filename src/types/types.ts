@@ -1,7 +1,20 @@
-type Project = { // array for multiple languages
-    name: string[];
-    description: string[];
+import { ReactNode } from 'react'
+
+type ProjectsT = {
+    title: string[]
+    projects: ProjectData[]
+}
+
+type ProjectData = { // array for multiple languages
+    id: number;
+    name: string;
+    description?: string[];
+    madeAt?: MonthYear;
+    picture?: string;
+    extraInfo?: ReactNode[];
     link: string;
+    tags?: string[][];
+    highlight?: boolean;
 }
 
 type MonthYear = {
@@ -26,4 +39,4 @@ type Job = { // array for multiple languages
     tags?: string[][];
 }
 
-export type { Project, Job, DateRange }
+export type { ProjectsT, ProjectData, Job, DateRange }
