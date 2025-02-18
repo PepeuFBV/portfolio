@@ -8,7 +8,7 @@ type ProjectsT = {
 type ProjectData = { // array for multiple languages
     id: number;
     name: string;
-    description?: string[];
+    description: string[];
     madeAt?: MonthYear;
     picture?: string;
     extraInfo?: ReactNode[];

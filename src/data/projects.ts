@@ -44,6 +44,7 @@ const projects: ProjectsT = {
                 month: 10,
                 year: 2024
             },
+            picture: '/project-pictures/Cache Implementation - Screenshot.png',
             link: 'https://github.com/PepeuFBV/Cache-Eviction',
             tags: [
                 [
@@ -69,7 +70,8 @@ const projects: ProjectsT = {
                 month: 10,
                 year: 2024
             },
-            link: 'https://github.com/PepeuFBV/Movie-Recommendation',
+            picture: '/project-pictures/Movie Recommendation - Screenshot.png',
+            link: 'https://github.com/PepeuFBV/Movie-Recommendation - Screenshot.png',
             tags: [
                 [
                     'Python',
@@ -97,6 +99,7 @@ const projects: ProjectsT = {
                 month: 4,
                 year: 2024
             },
+            picture: '/project-pictures/Upgrading Mars - Screenshot.png',
             link: 'https://github.com/PepeuFBV/Updating_mars',
             tags: [
                 [
@@ -114,7 +117,7 @@ const projects: ProjectsT = {
         },
         {
             id: 4,
-            name: 'https://github.com/PepeuFBV/MNIST_Classification',
+            name: 'MNIST Classification',
             description: [
                 'Developing a simple neural network to classify handwritten digits from the MNIST dataset, using TensorFlow.',
                 'Desenvolver uma rede neural simples para classificar dígitos manuscritos do conjunto de dados MNIST, utilizando a biblioteca TensorFlow.'
@@ -123,6 +126,7 @@ const projects: ProjectsT = {
                 month: 12,
                 year: 2023
             },
+            picture: '/project-pictures/MNIST Classification - Screenshot.png',
             link: 'https://github.com/PepeuFBV/MNIST_Classification',
             tags: [
                 [
