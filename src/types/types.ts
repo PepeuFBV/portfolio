@@ -39,4 +39,4 @@ type Job = { // array for multiple languages
     tags?: string[][];
 }
 
-export type { ProjectsT, ProjectData, Job, DateRange }
+export type { ProjectsT, ProjectData, Job, DateRange, MonthYear }

@@ -71,7 +71,7 @@ const projects: ProjectsT = {
                 year: 2024
             },
             picture: '/project-pictures/Movie Recommendation - Screenshot.png',
-            link: 'https://github.com/PepeuFBV/Movie-Recommendation - Screenshot.png',
+            link: 'https://github.com/PepeuFBV/Movie-Recommendation',
             tags: [
                 [
                     'Python',
@@ -99,7 +99,7 @@ const projects: ProjectsT = {
                 month: 4,
                 year: 2024
             },
-            picture: '/project-pictures/Upgrading Mars - Screenshot.png',
+            picture: '/project-pictures/Updating Mars - Screenshot.png',
             link: 'https://github.com/PepeuFBV/Updating_mars',
             tags: [
                 [

@@ -6,6 +6,7 @@ import { Home } from '@/components/core/Home'
 import { AboutMe } from '@/components/core/AboutMe'
 import { Experience } from '@/components/core/Experience'
 import { Footer } from '@/components/core/Footer'
+import { Projects } from '@/components/core/Projects'
 
 const INITIAL_DELAY = 0.02
 
@@ -27,6 +28,7 @@ export default function Main() {
             <div className="lg:w-1/2 mx-8 lg:ml-auto h-full flex flex-col gap-20 lg:mt-40 scroll-my-10">
                 <AboutMe INITIAL_DELAY={INITIAL_DELAY} languagePos={languagePos} />
                 <Experience INITIAL_DELAY={INITIAL_DELAY + 0.8} languagePos={languagePos} />
+                <Projects INITIAL_DELAY={INITIAL_DELAY + 3.8} languagePos={languagePos} />
                 <Footer className='w-full' INITIAL_DELAY={INITIAL_DELAY + 5.0} languagePos={languagePos} />
             </div>
         </main>
