@@ -14,6 +14,7 @@ type ProjectData = { // array for multiple languages
     extraInfo?: ReactNode[];
     link: string;
     tags?: string[][];
+    languagesAndFrameworks?: string[]; // column is compared with tag column and tags are removed in DataTable
     highlight?: boolean;
 }
 

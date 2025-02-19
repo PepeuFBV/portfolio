@@ -1,4 +1,4 @@
-import { ProjectsT, ProjectData } from '@/types/types'
+import { ProjectsT } from '@/types/types'
 
 const projects: ProjectsT = {
     title: [
@@ -31,7 +31,12 @@ const projects: ProjectsT = {
                     'Jetpack Compose',
                     'Desenvolvimento Mobile'
                 ]
-            ]
+            ],
+            languagesAndFrameworks: [
+                'Kotlin',
+                'Android',
+                'Jetpack Compose'
+            ],
         },
         {
             id: 1,
@@ -57,7 +62,8 @@ const projects: ProjectsT = {
                     'Estruturas de Dados',
                     'Cache',
                 ]
-            ]
+            ],
+            languagesAndFrameworks: ['Java']
         },
         {
             id: 2,
@@ -86,7 +92,13 @@ const projects: ProjectsT = {
                     'Sklearn',
                 ]
             ],
-            highlight: true
+            highlight: true,
+            languagesAndFrameworks: [
+                'Python',
+                'Sklearn',
+                'Pandas',
+                'Numpy'
+            ]
         },
         {
             id: 3,
@@ -113,7 +125,8 @@ const projects: ProjectsT = {
                     'Sistemas Operacionais',
                 ]
             ],
-            highlight: true
+            highlight: true,
+            languagesAndFrameworks: [ 'Java' ]
         },
         {
             id: 4,
@@ -140,7 +153,13 @@ const projects: ProjectsT = {
                     'TensorFlow',
                 ]
             ],
-            highlight: true
+            highlight: true,
+            languagesAndFrameworks: [
+                'Python',
+                'TensorFlow',
+                'Numpy',
+                'Pandas'
+            ]
         }
     ]
 }
