@@ -1,5 +1,6 @@
 import React from 'react'
 import { AppProvider } from '@/context/context'
+import { ThemeProvider } from '@/context/theme-provider'
 import { LanguageSwitch } from '@/components/core/LanguageSwitch'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
@@ -20,10 +21,17 @@ export default function RootLayout({
     return (
         <html lang="en-US">
             <body className={poppins.className}>
-                <AppProvider>
-                    <LanguageSwitch />
-                    {children}
-                </AppProvider>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark" //TODO: change back to system when ready
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <AppProvider>
+                        <LanguageSwitch />
+                        {children}
+                    </AppProvider>
+                </ThemeProvider>
             </body>
         </html>
     )
