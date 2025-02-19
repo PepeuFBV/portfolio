@@ -3,22 +3,24 @@
 import React, { useState, useEffect } from 'react'
 import { Project } from '@/components/core/Projects/Project'
 import { Link } from '@/components/core/Icons/components/link'
-import { projects } from '@/data/projects'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { ProjectData } from '@/types/types'
+import type { ProjectData } from '@/types/types'
+import { projects } from '@/data/projects'
 
 interface ProjectsProps {
     INITIAL_DELAY?: number
     languagePos?: number
 }
 const Projects: React.FC<ProjectsProps> = ({ INITIAL_DELAY = 0, languagePos = 0 }) => {
+    const router = useRouter()
 
     const [projectsData, setProjectsData] = useState<ProjectData[]>(projects.projects)
 
     useEffect(() => {
         const highlightedProjects: ProjectData[] = pickHighlightedProjects(projects.projects)
         setProjectsData(organizeByDate(highlightedProjects))
-    }, [])
+    }, [router])
 
     function pickHighlightedProjects(projects: ProjectData[]): ProjectData[] {
         return projects.filter(project => project.highlight)
@@ -57,10 +59,7 @@ const Projects: React.FC<ProjectsProps> = ({ INITIAL_DELAY = 0, languagePos = 0 
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: INITIAL_DELAY + projects.projects.length * 0.45 }}
                 className='w-fit flex gap-1'
-                //TODO: link to another sub-page
-                href={`/files/pedro-${languagePos === 0 ? 'en' : 'pt'}.pdf`}
-                target='_blank'
-                rel='noreferrer'
+                onClick={() => router.push('/projects')}
             >
                 <p className='text-sm font-normal underline cursor-pointer'>
                     {viewAll[languagePos]}

@@ -1,5 +1,7 @@
+import React from 'react'
+import { AppProvider } from '@/context/context'
+import { LanguageSwitch } from '@/components/core/LanguageSwitch'
 import type { Metadata } from 'next'
-import { getLanguagePos } from '@/utils/language-handler'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 
@@ -15,12 +17,13 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const languagePos = getLanguagePos()
-
     return (
-        <html lang={languagePos === 0 ? 'pt-br' : 'en-us'}>
+        <html lang="en-US">
             <body className={poppins.className}>
-                {children}
+                <AppProvider>
+                    <LanguageSwitch />
+                    {children}
+                </AppProvider>
             </body>
         </html>
     )

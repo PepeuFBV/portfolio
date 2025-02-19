@@ -1,5 +1,4 @@
 import type { DateRange } from '@/types/types'
-import { getLanguagePos } from '@/utils/language-handler'
 
 interface DatesProps {
     dates: DateRange | null

@@ -1,5 +1,4 @@
 import type { MonthYear } from '@/types/types'
-import { getLanguagePos } from '@/utils/language-handler'
 
 interface DateProps {
     date?: MonthYear,
