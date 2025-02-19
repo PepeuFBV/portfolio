@@ -10,9 +10,9 @@ enum Languages {
 }
 
 const LanguageSwitch = () => {
-    const { switchLanguage } = useAppContext()
+    const { languagePos, switchLanguage } = useAppContext()
 
-    const [currentLanguage, setCurrentLanguage] = useState<Languages>(Languages.PTBR)
+    const [currentLanguage, setCurrentLanguage] = useState<Languages>(languagePos === 0 ? Languages.EN : Languages.PTBR)
 
     const handleLanguageSwitch = () => {
         setCurrentLanguage(currentLanguage === Languages.EN ? Languages.PTBR : Languages.EN)
