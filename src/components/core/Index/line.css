@@ -1,0 +1,20 @@
+.link-with-line {
+    position: relative;
+    padding-left: 20px;
+}
+
+.link-with-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 100%;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.link-with-line:hover::before, .link-with-line.active::before {
+    width: 10px;
+}

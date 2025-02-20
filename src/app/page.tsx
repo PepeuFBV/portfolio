@@ -24,7 +24,7 @@ export default function Main() {
                 <AboutMe INITIAL_DELAY={INITIAL_DELAY} languagePos={languagePos} />
                 <Experience INITIAL_DELAY={INITIAL_DELAY + 0.8} languagePos={languagePos} />
                 <Projects INITIAL_DELAY={INITIAL_DELAY + 3.8} languagePos={languagePos} />
-                <Footer className='mt-8 w-full' INITIAL_DELAY={INITIAL_DELAY + 6.5} languagePos={languagePos} />
+                <Footer className='mt-24 w-full' INITIAL_DELAY={INITIAL_DELAY + 6.5} languagePos={languagePos} />
             </div>
         </main>
     )

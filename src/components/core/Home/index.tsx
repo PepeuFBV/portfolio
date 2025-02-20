@@ -6,6 +6,7 @@ import { Icons } from '@/components/core/Icons'
 import { aboutme } from '@/data/aboutme'
 import { cn } from '@/utils/tailwind-merge'
 import { motion } from 'framer-motion'
+import { Index } from '../Index'
 
 interface HomeProps {
     className?: string
@@ -55,9 +56,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
                         {aboutme.smallDescription[languagePos]}
                     </motion.p>
                 </div>
-                <div className='hidden lg:block'>
-                    <p>todo: index</p>
-                </div>
+                <Index />
             </div>
             <Icons languagePos={languagePos} />
         </section >

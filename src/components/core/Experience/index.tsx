@@ -38,7 +38,7 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePo
     ]
 
     return (
-        <section className='flex flex-col gap-8'>
+        <section className='flex flex-col gap-8' id='experience'>
             <motion.h2
                 key={`experience` + languagePos}
                 initial={{ opacity: 0, x: -30 }}

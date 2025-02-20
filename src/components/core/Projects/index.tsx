@@ -40,7 +40,7 @@ const Projects: React.FC<ProjectsProps> = ({ INITIAL_DELAY = 0, languagePos = 0 
     ]
 
     return (
-        <section className='flex flex-col gap-8'>
+        <section className='flex flex-col gap-8' id='projects'>
             <motion.h2
                 key={`projects` + languagePos}
                 initial={{ opacity: 0, x: -30 }}

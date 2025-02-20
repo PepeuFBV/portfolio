@@ -14,7 +14,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ INITIAL_DELAY = 0.0, languagePos = 0 
     let iterator: number = 0
 
     return (
-        <section className='flex flex-col gap-8'>
+        <section className='flex flex-col gap-8' id='about-me'>
             <motion.h2
                 key={`title` + languagePos}
                 initial={{ opacity: 0, x: -50 }}
