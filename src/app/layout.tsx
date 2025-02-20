@@ -2,6 +2,7 @@ import React from 'react'
 import { AppProvider } from '@/context/context'
 import { ThemeProvider } from '@/context/theme-provider'
 import { LanguageSwitch } from '@/components/core/LanguageSwitch'
+import { ModeToggle } from '@/components/core/ModeToggle'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
@@ -23,12 +24,16 @@ export default function RootLayout({
             <body className={poppins.className}>
                 <ThemeProvider
                     attribute="class"
-                    defaultTheme="dark" //TODO: change back to system when ready
+                    defaultTheme="system" //TODO: change back to system when ready
                     enableSystem
                     disableTransitionOnChange
                 >
+
                     <AppProvider>
-                        <LanguageSwitch />
+                        <div className='fixed right-0 top-0 mt-10 mr-10 flex flex-col lg:flex-row items-end gap-4'>
+                            <LanguageSwitch />
+                            <ModeToggle />
+                        </div>
                         {children}
                     </AppProvider>
                 </ThemeProvider>

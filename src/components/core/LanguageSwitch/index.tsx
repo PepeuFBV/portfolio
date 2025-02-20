@@ -20,7 +20,7 @@ const LanguageSwitch = () => {
     }
 
     return (
-        <div className='fixed right-0 top-0 mt-10 mr-10 flex justify-center items-center'>
+        <div className='flex justify-center items-center'>
             <div className='relative w-40 h-10 bg-zinc-900 rounded-full overflow-hidden'>
                 <motion.div
                     className='absolute top-0 left-0 w-1/2 h-full bg-zinc-700'
