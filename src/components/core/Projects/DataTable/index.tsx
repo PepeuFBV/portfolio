@@ -32,6 +32,7 @@ const DataTable: React.FC<DataTableProps<ProjectData, any>> = ({ className = '',
 
     return (
         <motion.div
+            key={`projects` + Math.random()}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}

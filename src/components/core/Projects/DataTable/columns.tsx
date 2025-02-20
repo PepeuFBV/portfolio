@@ -78,7 +78,7 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
             header: headers.link[languagePos],
             cell: ({ row }) => {
                 const link: string = row.original.link
-                if (link.startsWith('https://gthub.com')) {
+                if (link.startsWith('https://github.com')) {
                     return (
                         <Github
                             size={24}
