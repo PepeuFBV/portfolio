@@ -10,8 +10,6 @@ import { Projects } from '@/components/core/Projects'
 
 const INITIAL_DELAY = 0.02
 
-// TODO: exit animations for language switch, switch animations
-
 export default function Main() {
     const { languagePos } = useAppContext()
 
@@ -24,7 +22,7 @@ export default function Main() {
                 <AboutMe INITIAL_DELAY={INITIAL_DELAY} languagePos={languagePos} />
                 <Experience INITIAL_DELAY={INITIAL_DELAY + 0.8} languagePos={languagePos} />
                 <Projects INITIAL_DELAY={INITIAL_DELAY + 3.8} languagePos={languagePos} />
-                <Footer className='mt-24 w-full' INITIAL_DELAY={INITIAL_DELAY + 6.5} languagePos={languagePos} />
+                <Footer className='mt-16 lg:mt-24 w-full' INITIAL_DELAY={INITIAL_DELAY + 6.5} languagePos={languagePos} />
             </div>
         </main>
     )

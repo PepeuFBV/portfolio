@@ -38,7 +38,9 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
                 }
                 const month: number = row.original.madeAt?.month || 0
                 const year: number = row.original.madeAt?.year || 0
-                return `${dateNameMapping[month][languagePos]} ${year}`
+                return (
+                    <p className='text-xs'>{dateNameMapping[month][languagePos]} {year}</p>
+                )
             }
         },
         {
@@ -46,16 +48,24 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
             header: headers.project[languagePos],
             cell: ({ row }) => {
                 return (
-                    <p className=' font-semibold'>{row.original.name}</p>
+                    <p className='font-semibold'>{row.original.name}</p>
                 )
             }
         },
         {
             accessorKey: 'description',
-            header: headers.description[languagePos],
+            header: () => (
+                <div className='hidden md:flex'>
+                    <p className='font-'>{headers.description[languagePos]}</p>
+                </div>
+            ),
             cell: ({ row }) => {
-                const descriptions: string[] = row.original.description
-                return descriptions[languagePos]
+                const description: string[] = row.original.description
+                return (
+                    <div className='hidden md:flex'>
+                        <p className='line-clamp-4 lg:line-clamp-8'>{description[languagePos]}</p>
+                    </div>
+                )
             }
         },
         {
@@ -65,7 +75,7 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
                 return (
                     <div className='flex flex-wrap'>
                         {row.original.languagesAndFrameworks?.map((name: string, index: number) => (
-                            <div key={index} className='w-fit bg-zinc-200 dark:bg-zinc-900 rounded-full px-2 py-1 m-1 text-nowrap'>
+                            <div key={index} className='w-fit bg-zinc-200 dark:bg-zinc-900 rounded-full px-2 py-1 m-1 text-nowrap text-xs'>
                                 {name}
                             </div>
                         ))}
