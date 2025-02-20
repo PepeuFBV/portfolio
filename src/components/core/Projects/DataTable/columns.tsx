@@ -65,7 +65,7 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
                 return (
                     <div className='flex flex-wrap'>
                         {row.original.languagesAndFrameworks?.map((name: string, index: number) => (
-                            <div key={index} className='w-fit bg-zinc-900 rounded-full px-2 py-1 m-1 text-nowrap'>
+                            <div key={index} className='w-fit bg-zinc-200 dark:bg-zinc-900 rounded-full px-2 py-1 m-1 text-nowrap'>
                                 {name}
                             </div>
                         ))}
@@ -78,7 +78,7 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
             header: headers.link[languagePos],
             cell: ({ row }) => {
                 const link: string = row.original.link
-                if (link.startsWith('https://github.com')) {
+                if (link.startsWith('https://gthub.com')) {
                     return (
                         <Github
                             size={24}
@@ -88,6 +88,7 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
                 } else {
                     return (
                         <Link
+                            size={26}
                             href={link}
                         />
                     )

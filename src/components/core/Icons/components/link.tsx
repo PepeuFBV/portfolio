@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react'
+import { useTheme } from 'next-themes'
 import { cn } from '@/utils/tailwind-merge'
 
 interface LinkProps {
@@ -7,6 +10,11 @@ interface LinkProps {
     href?: string
 }
 const Link: React.FC<LinkProps> = ({ className = '', size = 24, href }) => {
+    const { theme } = useTheme()
+
+    let link: string = '/icons/link-white.svg'
+    if (theme === 'dark') link = '/icons/link.svg'
+
     if (href) {
         return (
             <a
@@ -15,7 +23,7 @@ const Link: React.FC<LinkProps> = ({ className = '', size = 24, href }) => {
                 rel='noreferrer'
             >
                 <img
-                    src={'/icons/link.svg'}
+                    src={link}
                     alt='link'
                     width={`${size}px`}
                     height={`${size}px`}
@@ -26,7 +34,7 @@ const Link: React.FC<LinkProps> = ({ className = '', size = 24, href }) => {
         return (
             <div className={cn('', className)}>
                 <img
-                    src={'/icons/link.svg'}
+                    src={link}
                     alt='link'
                     width={`${size}px`}
                     height={`${size}px`}

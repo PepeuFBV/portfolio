@@ -48,9 +48,7 @@ export default function ProjectsPage() {
                     {projects.title[languagePos]}
                 </motion.h2>
             </div>
-            <div>
-                <DataTable projects={projects.projects} columns={columns} />
-            </div>
+            <DataTable projects={projects.projects} columns={columns} />
         </main>
     )
 }

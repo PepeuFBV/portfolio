@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { useTheme } from 'next-themes'
 import { motion, Variants } from 'framer-motion'
 import { cn } from '@/utils/tailwind-merge'
 
@@ -11,6 +12,10 @@ interface MoveLeftProps {
     animationVariants: Variants
 }
 const MoveLeft: React.FC<MoveLeftProps> = ({ className = '', size = 24, animate = false, animationVariants }) => {
+    const { theme } = useTheme()
+
+    const imageLink: string = theme === 'dark' ? '/icons/move-left.svg' : '/icons/move-left-white.svg'
+
     if (animate) {
         if (!animationVariants) {
             throw new Error('The animation prop is required when animate is true')
@@ -21,7 +26,7 @@ const MoveLeft: React.FC<MoveLeftProps> = ({ className = '', size = 24, animate 
                 className={cn(className)}
             >
                 <img
-                    src={'/icons/move-left.svg'}
+                    src={imageLink}
                     alt='move-left'
                     width={`${size}px`}
                     height={`${size}px`}
@@ -35,7 +40,7 @@ const MoveLeft: React.FC<MoveLeftProps> = ({ className = '', size = 24, animate 
                 className={cn(className)}
             >
                 <img
-                    src={'/icons/move-left.svg'}
+                    src={imageLink}
                     alt='move-left'
                     width={`${size}px`}
                     height={`${size}px`}
