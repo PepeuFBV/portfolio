@@ -21,7 +21,12 @@ const LanguageSwitch = () => {
 
     return (
         <div className='flex justify-center items-center'>
-            <div className='relative w-40 h-10 bg-zinc-300 dark:bg-zinc-900 rounded-full overflow-hidden'>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.9 }}
+                className='relative w-40 h-10 bg-zinc-300 dark:bg-zinc-900 rounded-full overflow-hidden'
+            >
                 <motion.div
                     className='absolute top-0 left-0 w-1/2 h-full bg-zinc-400 dark:bg-zinc-700'
                     animate={{ x: currentLanguage === Languages.EN ? 0 : '100%' }}
@@ -39,7 +44,7 @@ const LanguageSwitch = () => {
                 >
                     <div className='dark:text-white text-sm'>PT-BR</div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

@@ -33,7 +33,7 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePo
     }
 
     const viewAll: string[] = [
-        'See full curriculum',
+        'See full CV',
         'Ver currículo completo'
     ]
 

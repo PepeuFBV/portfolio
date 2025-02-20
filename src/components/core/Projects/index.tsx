@@ -57,7 +57,7 @@ const Projects: React.FC<ProjectsProps> = ({ INITIAL_DELAY = 0, languagePos = 0 
                 key={`see-all` + languagePos}
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: INITIAL_DELAY + projects.projects.length * 0.45 }}
+                transition={{ duration: 0.3, delay: INITIAL_DELAY + projects.projects.length * 0.45 - 0.1 }}
                 className='w-fit flex gap-1'
                 onClick={() => router.push('/projects')}
             >
