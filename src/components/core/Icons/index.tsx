@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { Github } from '@/components/core/Icons/components/github'
 import { Linkedin } from '@/components/core/Icons/components/linkedin'
 import { Curriculum } from '@/components/core/Icons/components/curriculum'
@@ -9,7 +10,10 @@ const INITIAL_DELAY = 0.0
 const DELAY_MULTIPLIER = 0.2
 const ICON_SIZE = 32
 
-const Icons = () => {
+interface IconsProps {
+    languagePos?: number
+}
+const Icons: React.FC<IconsProps> = ({ languagePos = 0 }) => {
     let iterator: number = 0 // icons iterator
 
     return (
@@ -33,7 +37,7 @@ const Icons = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: INITIAL_DELAY + DELAY_MULTIPLIER * iterator++ }}
             >
-                <Curriculum size={ICON_SIZE} />
+                <Curriculum size={ICON_SIZE} languagePos={languagePos} />
             </motion.div>
         </div>
     )

@@ -1,7 +1,21 @@
-type Project = { // array for multiple languages
-    name: string[];
+import { ReactNode } from 'react'
+
+type ProjectsT = {
+    title: string[]
+    projects: ProjectData[]
+}
+
+type ProjectData = { // array for multiple languages
+    id: number;
+    name: string;
     description: string[];
+    madeAt?: MonthYear;
+    picture?: string;
+    extraInfo?: ReactNode[];
     link: string;
+    tags?: string[][];
+    languagesAndFrameworks?: string[]; // column is compared with tag column and tags are removed in DataTable
+    highlight?: boolean;
 }
 
 type MonthYear = {
@@ -26,4 +40,4 @@ type Job = { // array for multiple languages
     tags?: string[][];
 }
 
-export type { Project, Job, DateRange }
+export type { ProjectsT, ProjectData, Job, DateRange, MonthYear }

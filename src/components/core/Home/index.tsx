@@ -59,7 +59,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
                     <p>todo: index</p>
                 </div>
             </div>
-            <Icons />
+            <Icons languagePos={languagePos} />
         </section >
     )
 }

@@ -1,5 +1,8 @@
+import React from 'react'
+import { AppProvider } from '@/context/context'
+import { ThemeProvider } from '@/context/theme-provider'
+import { LanguageSwitch } from '@/components/core/LanguageSwitch'
 import type { Metadata } from 'next'
-import { getLanguagePos } from '@/utils/language-handler'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 
@@ -15,12 +18,20 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const languagePos = getLanguagePos()
-
     return (
-        <html lang={languagePos === 0 ? 'pt-br' : 'en-us'}>
+        <html lang="en-US" suppressHydrationWarning>
             <body className={poppins.className}>
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark" //TODO: change back to system when ready
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <AppProvider>
+                        <LanguageSwitch />
+                        {children}
+                    </AppProvider>
+                </ThemeProvider>
             </body>
         </html>
     )

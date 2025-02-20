@@ -1,13 +1,11 @@
 import type { DateRange } from '@/types/types'
-import { getLanguagePos } from '@/utils/language-handler'
 
 interface DatesProps {
     dates: DateRange | null
+    languagePos?: number
 }
-const Dates: React.FC<DatesProps> = ({ dates }) => {
+const Dates: React.FC<DatesProps> = ({ dates, languagePos = 0 }) => {
     if (!dates) return null
-
-    const languagePos = getLanguagePos()
 
     const dateNameMapping: { [key: number]: string[] } = {
         1: ['Jan', 'Jan'],

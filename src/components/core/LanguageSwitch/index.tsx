@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useAppContext } from '@/context/context'
 import { motion } from 'framer-motion'
 
 enum Languages {
@@ -8,11 +9,10 @@ enum Languages {
     PTBR = 'pt',
 }
 
-interface LanguageSwitchProps {
-    switchLanguage: () => void
-}
-const LanguageSwitch: React.FC<LanguageSwitchProps> = ({ switchLanguage }) => {
-    const [currentLanguage, setCurrentLanguage] = useState<Languages>(Languages.PTBR)
+const LanguageSwitch = () => {
+    const { languagePos, switchLanguage } = useAppContext()
+
+    const [currentLanguage, setCurrentLanguage] = useState<Languages>(languagePos === 0 ? Languages.EN : Languages.PTBR)
 
     const handleLanguageSwitch = () => {
         setCurrentLanguage(currentLanguage === Languages.EN ? Languages.PTBR : Languages.EN)
