@@ -92,6 +92,7 @@
 
     *::-webkit-scrollbar-thumb {
         background-color: #b9b9b9;
+        border-radius: 4px;
     }
 
   /* *::-webkit-scrollbar-thumb:hover {
