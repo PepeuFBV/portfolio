@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { cn } from '@/utils/tailwind-merge'
 
@@ -11,6 +11,15 @@ interface LinkProps {
 }
 const Link: React.FC<LinkProps> = ({ className = '', size = 24, href }) => {
     const { theme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!mounted) {
+        return null
+    }
 
     let link: string = '/icons/link-white.svg'
     if (theme === 'dark') link = '/icons/link.svg'

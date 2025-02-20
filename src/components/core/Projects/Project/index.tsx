@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Github } from '@/components/core/Icons/components/github'
 import { Link } from '@/components/core/Icons/components/link'
@@ -15,6 +15,12 @@ interface ProjectProps {
 }
 const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0 }) => {
     const orderedTags: string[] = project.tags ? project.tags[languagePos].sort((a, b) => a.localeCompare(b)) : []
+
+    const [isGithubLink, setIsGithubLink] = useState<boolean>(false)
+
+    useEffect(() => {
+        setIsGithubLink(project.link.startsWith('https://github.com'))
+    }, [project.link])
 
     return (
         <motion.a
@@ -44,7 +50,7 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
                             <h3 className='text-base font-bold'>
                                 {project.name}
                             </h3>
-                            {project.link.startsWith('https://github.com') ? (
+                            {isGithubLink ? (
                                 <Github
                                     size={24}
                                     href={project.link}
