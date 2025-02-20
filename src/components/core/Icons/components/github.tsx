@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 interface GithubProps {
@@ -9,9 +9,15 @@ interface GithubProps {
 }
 const Github: React.FC<GithubProps> = ({ size = 24, href = 'https://github.com/PepeuFBV' }) => {
     const { theme } = useTheme()
+    const [link, setLink] = useState('/icons/github-mark.svg')
 
-    let link: string = '/icons/github-mark.svg'
-    if (theme === 'dark') link = '/icons/github-mark-white.svg'
+    useEffect(() => {
+        if (theme === 'dark') {
+            setLink('/icons/github-mark-white.svg')
+        } else {
+            setLink('/icons/github-mark.svg')
+        }
+    }, [theme])
 
     return (
         <a href={href} target='_blank' rel='noreferrer'>

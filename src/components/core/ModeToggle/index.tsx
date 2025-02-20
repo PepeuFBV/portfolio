@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
@@ -9,7 +9,11 @@ import { useAppContext } from '@/context/context'
 const ModeToggle = () => {
     const { theme, setTheme } = useTheme()
     const { languagePos } = useAppContext()
-    const [isDarkMode, setIsDarkMode] = useState(theme === 'dark')
+    const [isDarkMode, setIsDarkMode] = useState(false)
+
+    useEffect(() => {
+        setIsDarkMode(theme === 'dark')
+    }, [theme])
 
     const text = {
         toggle: ['Toggle theme', 'Alternar tema'],
