@@ -4,26 +4,30 @@ import { cn } from '@/utils/tailwind-merge'
 interface LinkProps {
     className?: string
     size?: number
-    github?: boolean
+    href?: string
 }
-const Link: React.FC<LinkProps> = ({ className = '', size = 24, github = false }) => {
-    if (!github) {
+const Link: React.FC<LinkProps> = ({ className = '', size = 24, href }) => {
+    if (href) {
         return (
-            <div className={cn('', className)}>
+            <a
+                href={href}
+                target='_blank'
+                rel='noreferrer'
+            >
                 <img
                     src={'/icons/link.svg'}
                     alt='link'
                     width={`${size}px`}
                     height={`${size}px`}
                 />
-            </div>
+            </a>
         )
     } else {
         return (
-            <div className={cn('h-full flex justify-center items-center', className)}>
+            <div className={cn('', className)}>
                 <img
-                    src={'/icons/github-mark-white.svg'}
-                    alt='github'
+                    src={'/icons/link.svg'}
+                    alt='link'
                     width={`${size}px`}
                     height={`${size}px`}
                 />

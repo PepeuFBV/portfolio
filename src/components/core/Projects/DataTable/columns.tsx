@@ -1,6 +1,8 @@
 'use client'
 
 import { ColumnDef } from '@tanstack/react-table'
+import { Github } from '@/components/core/Icons/components/github'
+import { Link } from '@/components/core/Icons/components/link'
 import type { ProjectData } from '@/types/types'
 
 interface ColumnsProps {
@@ -42,18 +44,55 @@ export const getColumns = ({ languagePos }: ColumnsProps): ColumnDef<ProjectData
         {
             accessorKey: 'name',
             header: headers.project[languagePos],
+            cell: ({ row }) => {
+                return (
+                    <p className=' font-semibold'>{row.original.name}</p>
+                )
+            }
         },
         {
             accessorKey: 'description',
             header: headers.description[languagePos],
+            cell: ({ row }) => {
+                const descriptions: string[] = row.original.description
+                return descriptions[languagePos]
+            }
         },
         {
             accessorKey: 'tags',
             header: headers.tags[languagePos],
+            cell: ({ row }) => {
+                return (
+                    <div className='flex flex-wrap'>
+                        {row.original.languagesAndFrameworks?.map((name: string, index: number) => (
+                            <div key={index} className='w-fit bg-zinc-900 rounded-full px-2 py-1 m-1 text-nowrap'>
+                                {name}
+                            </div>
+                        ))}
+                    </div>
+                )
+            }
         },
         {
             accessorKey: 'link',
             header: headers.link[languagePos],
+            cell: ({ row }) => {
+                const link: string = row.original.link
+                if (link.startsWith('https://github.com')) {
+                    return (
+                        <Github
+                            size={24}
+                            href={link}
+                        />
+                    )
+                } else {
+                    return (
+                        <Link
+                            href={link}
+                        />
+                    )
+                }
+            }
         }
     ]
 }
