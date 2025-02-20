@@ -26,13 +26,13 @@ const Dates: React.FC<DatesProps> = ({ dates, languagePos = 0 }) => {
         if (dates.end) {
             if (dates.start.year === dates.end.year) {
                 return (
-                    <div className='min-w-28 uppercase text-xs font-light text-zinc-400 mt-2'>
+                    <div className='min-w-28 uppercase text-xs dark:font-light dark:text-zinc-400 mt-2'>
                         <span>{dateNameMapping[dates.start.month ?? 1][languagePos]} - {dateNameMapping[dates.end.month ?? 1][languagePos]} {dates.start.year}</span>
                     </div>
                 )
             } else {
                 return (
-                    <div className='min-w-28 uppercase text-xs font-light text-zinc-400 mt-2'>
+                    <div className='min-w-28 uppercase text-xs dark:font-light dark:text-zinc-400 mt-2'>
                         <span>{dates.start.year} - {dates.end.year}</span>
                     </div>
                 )
@@ -40,13 +40,13 @@ const Dates: React.FC<DatesProps> = ({ dates, languagePos = 0 }) => {
         } else {
             if (dates.singleDate) {
                 return (
-                    <div className='min-w-28 uppercase text-xs font-light text-zinc-400 mt-2'>
+                    <div className='min-w-28 uppercase text-xs dark:font-light dark:text-zinc-400 mt-2'>
                         <span>{dateNameMapping[dates.start.month ?? 1][languagePos]} {dates.start.year}</span>
                     </div>
                 )
             } else {
                 return (
-                    <div className='min-w-28 uppercase text-xs font-light text-zinc-400 mt-2'>
+                    <div className='min-w-28 uppercase text-xs dark:font-light dark:text-zinc-400 mt-2'>
                         <span>{dates.start.year} - {languagePos === 0 ? 'Present' : 'Atual'}</span>
                     </div>
                 )

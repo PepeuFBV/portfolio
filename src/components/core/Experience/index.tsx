@@ -64,7 +64,7 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePo
                 <p className='text-sm font-normal underline cursor-pointer'>
                     {viewAll[languagePos]}
                 </p>
-                <Link size={12} />
+                <Link size={14} />
             </motion.a>
         </section>
     )

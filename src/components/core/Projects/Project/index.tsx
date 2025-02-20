@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { Github } from '@/components/core/Icons/components/github'
 import { Link } from '@/components/core/Icons/components/link'
 import type { ProjectData } from '@/types/types'
 import { Date } from '@/components/core/Projects/Project/Date'
@@ -43,7 +44,17 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
                             <h3 className='text-base font-bold'>
                                 {project.name}
                             </h3>
-                            <Link size={16} github />
+                            {project.link.startsWith('https://github.com') ? (
+                                <Github
+                                    size={24}
+                                    href={project.link}
+                                />
+                            ) : (
+                                <Link
+                                    size={26}
+                                    href={project.link}
+                                />
+                            )}
                         </div>
                         <Date date={project.madeAt} languagePos={languagePos} />
                     </div>
@@ -52,8 +63,7 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
                 <div className='flex flex-row gap-2'>
                     {orderedTags.map((tag, index) => (
                         <React.Fragment key={index}>
-                            <p className='text-xs font-light text-zinc-400'>{tag}</p>
-                            {index < orderedTags.length - 1 && <p className='text-xs font-light text-zinc-400'>•</p>}
+                            <p className='text-xs font-light dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 p-1 rounded'>{tag}</p>
                         </React.Fragment>
                     ))}
                 </div>

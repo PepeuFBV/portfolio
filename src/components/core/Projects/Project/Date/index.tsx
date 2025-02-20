@@ -23,7 +23,7 @@ const Date: React.FC<DateProps> = ({ date, languagePos = 0 }) => {
     }
 
     return (
-        <div className='uppercase text-xs font-light text-zinc-400 mt-2'>
+        <div className='uppercase text-xs dark:font-light dark:text-zinc-400 mt-2'>
             <span>{dateNameMapping[date.month ?? 1][languagePos]} {date.year}</span>
         </div>
     )

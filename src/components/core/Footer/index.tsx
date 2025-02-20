@@ -7,14 +7,14 @@ import '@/components/core/Footer/loading.css'
 
 const FooterText: ReactNode[][] = [
     [
-        <p>Deployed in <span className='text-white'>Vercel</span>.</p>,
-        <p>Designed with <span className='text-white'>Figma</span>, built in <span className='text-white'>NextJS</span> with <span className='text-white'>React</span>, <span className='text-white'>Typescript</span> and <span className='text-white'>TailwindCSS</span>.</p>,
-        <p><span className='text-white'>Poppings</span> is the font.</p>
+        <p>Deployed in <span className='font-semibold dark:text-white'>Vercel</span>.</p>,
+        <p>Designed with <span className='font-semibold dark:text-white'>Figma</span>, built in <span className='font-semibold dark:text-white'>NextJS</span> with <span className='font-semibold dark:text-white'>React</span>, <span className='font-semibold dark:text-white'>Typescript</span> and <span className='font-semibold dark:text-white'>TailwindCSS</span>.</p>,
+        <p><span className='font-semibold dark:text-white'>Poppings</span> is the font.</p>
     ],
     [
-        <p>Deployado no <span className='text-white'>Vercel</span>.</p>,
-        <p>Design feito com o <span className='text-white'>Figma</span>, construído em <span className='text-white'>NextJS</span> com programação em <span className='text-white'>React</span>, <span className='text-white'>Typescript</span> e <span className='text-white'>TailwindCSS</span>.</p>,
-        <p><span className='text-white'>Poppings</span> é a fonte.</p>
+        <p>Deployado no <span className='font-semibold dark:text-white'>Vercel</span>.</p>,
+        <p>Design feito com o <span className='font-semibold dark:text-white'>Figma</span>, construído em <span className='font-semibold dark:text-white'>NextJS</span> com programação em <span className='font-semibold dark:text-white'>React</span>, <span className='font-semibold dark:text-white'>Typescript</span> e <span className='font-semibold dark:text-white'>TailwindCSS</span>.</p>,
+        <p><span className='font-semibold dark:text-white'>Poppings</span> é a fonte.</p>
     ]
 ]
 
@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({ className, INITIAL_DELAY = 0.0, languag
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: INITIAL_DELAY }}
-                className='text-start text-sm text-zinc-500'
+                className='text-start text-sm dark:text-zinc-500'
             >
                 {FooterText[languagePos][0]}
                 {FooterText[languagePos][1]}

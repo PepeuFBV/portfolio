@@ -20,7 +20,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en-US" suppressHydrationWarning>
+        <html lang="en-US" suppressHydrationWarning> {/*todo: fix language*/}
             <body className={poppins.className}>
                 <ThemeProvider
                     attribute="class"

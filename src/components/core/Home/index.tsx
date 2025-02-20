@@ -21,7 +21,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0 }}
-                            className='hidden md:block'
+                            className='hidden md:block py-1 px-2 bg-zinc-200 dark:bg-zinc-900 rounded-lg'
                         >
                             <Image src="/pedro.jpg" alt="Logo" width={150} height={150} loading='eager' quality={100} className='rounded-full float-left' />
                         </motion.div>
@@ -39,7 +39,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 1 }}
-                                className='font-extralight text-lg text-zinc-400'
+                                className='dark:font-extralight text-lg dark:text-zinc-400'
                             >
                                 {aboutme.role[languagePos]}
                             </motion.p>
@@ -50,7 +50,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 1.3 }}
-                        className='text-start font-extralight text-md w-[58%]'
+                        className='text-start dark:font-extralight text-md w-[58%]'
                     >
                         {aboutme.smallDescription[languagePos]}
                     </motion.p>
