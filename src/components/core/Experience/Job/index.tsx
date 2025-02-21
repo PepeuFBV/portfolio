@@ -21,7 +21,7 @@ const Job: React.FC<JobProps> = ({ job, DELAY = 0.0, languagePos = 0 }) => {
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: DELAY }}
-            className='flex flex-col lg:flex-row gap-3 hover:bg-zinc-300 dark:hover:bg-zinc-900 hover:bg-opacity-15 dark:hover:shadow p-3 rounded-xl h-40'
+            className='flex flex-col lg:flex-row gap-3 hover:bg-zinc-300 dark:hover:bg-zinc-900 hover:bg-opacity-15 dark:hover:shadow p-3 rounded-xl min-h-40 max-h-48'
         >
             <Dates dates={job.date} languagePos={languagePos} />
             <div className='flex flex-col justify-between mb-1 w-full gap-2 lg:gap-0'>
@@ -63,10 +63,10 @@ const Job: React.FC<JobProps> = ({ job, DELAY = 0.0, languagePos = 0 }) => {
                     </div>
                     <p className='text-xs truncate-description'>{job.description[languagePos]}</p>
                 </div>
-                <div className='flex flex-row gap-2'>
+                <div className='mt-1 flex flex-row flex-wrap gap-2'>
                     {orderedTags.map((tag, index) => (
                         <React.Fragment key={index}>
-                            <p className='text-xs font-light dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 p-1 rounded'>{tag}</p>
+                            <p className='text-xs text-nowrap font-light dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 p-1 rounded'>{tag}</p>
                             {index < orderedTags.length - 1 && <p className='text-xs font-light text-zinc-400'> · </p>}
                         </React.Fragment>
                     ))}

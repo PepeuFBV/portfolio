@@ -36,7 +36,7 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: DELAY }}
-            className='grid grid-cols-12 gap-3 hover:bg-slate-700 hover:bg-opacity-15 hover:shadow p-3 rounded-xl h-40'
+            className='grid grid-cols-12 gap-3 hover:bg-slate-700 hover:bg-opacity-15 hover:shadow p-3 rounded-xl min-h-40 max-h-48'
             href={project.link}
             target='_blank'
             rel='noreferrer'
@@ -57,7 +57,7 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
                 <div className='flex flex-col gap-3'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='h-full flex gap-2'>
-                            <h3 className='text-base font-bold'>
+                            <h3 className='w-fit text-base font-bold'>
                                 {project.name}
                             </h3>
                             {isGithubLink ? (
@@ -77,10 +77,10 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
                     </div>
                     <p className='text-xs truncate-description'>{project.description[languagePos]}</p>
                 </div>
-                <div className='flex flex-row gap-2'>
+                <div className='mt-1 flex flex-row flex-wrap gap-2'>
                     {orderedTags.map((tag, index) => (
                         <React.Fragment key={index}>
-                            <p className='text-xs font-light dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 p-1 rounded'>{tag}</p>
+                            <p className='text-xs text-nowrap font-light dark:text-zinc-400 bg-zinc-200 dark:bg-zinc-800 p-1 rounded'>{tag}</p>
                         </React.Fragment>
                     ))}
                 </div>

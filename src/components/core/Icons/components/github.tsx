@@ -22,12 +22,14 @@ const Github: React.FC<GithubProps> = ({ size = 24, href = 'https://github.com/P
 
     if (!anchor) {
         return (
-            <img
-                src={link}
-                alt='github'
-                width={`${size}px`}
-                height={`${size}px`}
-            />
+            <div>
+                <img
+                    src={link}
+                    alt='github'
+                    width={`${size}px`}
+                    height={`${size}px`}
+                />
+            </div>
         )
     }
     return (
