@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import type { ProjectData } from '@/types/types'
 import { projects } from '@/data/projects'
+import loadPage from '@/utils/page-routing-url'
 
 interface ProjectsProps {
     INITIAL_DELAY?: number

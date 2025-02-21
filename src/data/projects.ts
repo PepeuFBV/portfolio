@@ -102,7 +102,7 @@ const projects: ProjectsT = {
         },
         {
             id: 3,
-            name: 'Upgrading Mars',
+            name: 'Updating Mars',
             description: [
                 'A modification of the Mars software for the MIPS architecture, corresponding to part of the operating system infrastructure to perform process management, such as creation of Syscalls, PCB, and process scheduling.',
                 'Uma modificação do software Mars para a arquitetura MIPS, correspondente a parte da infraestrutura de sistema operacional para realizar gerenciamento de processos, como criação de Syscalls, PCB e escalonamento de processos.'
