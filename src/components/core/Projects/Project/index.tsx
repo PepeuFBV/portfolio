@@ -64,6 +64,7 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
                                 <Github
                                     size={24}
                                     href={project.link}
+                                    anchor={false}
                                 />
                             ) : (
                                 <Link

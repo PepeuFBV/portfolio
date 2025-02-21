@@ -6,8 +6,9 @@ import { useTheme } from 'next-themes'
 interface GithubProps {
     size?: number
     href?: string
+    anchor?: boolean
 }
-const Github: React.FC<GithubProps> = ({ size = 24, href = 'https://github.com/PepeuFBV' }) => {
+const Github: React.FC<GithubProps> = ({ size = 24, href = 'https://github.com/PepeuFBV', anchor = true }) => {
     const { theme } = useTheme()
     const [link, setLink] = useState('/icons/github-mark.svg')
 
@@ -19,6 +20,16 @@ const Github: React.FC<GithubProps> = ({ size = 24, href = 'https://github.com/P
         }
     }, [theme])
 
+    if (!anchor) {
+        return (
+            <img
+                src={link}
+                alt='github'
+                width={`${size}px`}
+                height={`${size}px`}
+            />
+        )
+    }
     return (
         <a href={href} target='_blank' rel='noreferrer'>
             <img
