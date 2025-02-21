@@ -20,14 +20,13 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en-US" suppressHydrationWarning> {/*todo: fix language*/}
+        <html lang="en-US" suppressHydrationWarning>
             <body className={poppins.className}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
                     enableSystem
                 >
-
                     <AppProvider>
                         <div className='fixed right-0 top-0 mt-10 mr-10 flex flex-col lg:flex-row items-end gap-4'>
                             <LanguageSwitch />
