@@ -46,7 +46,7 @@ const aboutme: AboutMeContent = {
     ],
     description3: [
         <>
-            Currently, I'm working as a fullstack software developer and researcher at <a className='underline hover:text-blue-800 visited:text-purple-600' href="https://www.smartrural.com.br" target="_blank" rel="noreferrer">SmartRural</a>, developing a real-time monitoring system for IoT devices in the aquiculture sector.
+            Currently, I&apos;m working as a fullstack software developer and researcher at <a className='underline hover:text-blue-800 visited:text-purple-600' href="https://www.smartrural.com.br" target="_blank" rel="noreferrer">SmartRural</a>, developing a real-time monitoring system for IoT devices in the aquiculture sector.
         </>,
         <>
             Atualmente, estou trabalhando como desenvolvedor de software fullstack e pesquisador na <a className='underline hover:text-blue-800 visited:text-purple-600' href="https://www.smartrural.com.br" target="_blank" rel="noreferrer">SmartRural</a>, desenvolvendo um sistema de monitoramento em tempo real para dispositivos IoT no setor de aquicultura.
@@ -54,7 +54,7 @@ const aboutme: AboutMeContent = {
     ],
     descriptionExtra: [
         <>
-            I'm always looking for new challenges and opportunities to learn and improve my skills. I love learing new languages, frameworks and tools to create better solutions and improve my knowledge. Currently learning <b>Rust</b> and <b>Golang</b>.
+            I&apos;m always looking for new challenges and opportunities to learn and improve my skills. I love learing new languages, frameworks and tools to create better solutions and improve my knowledge. Currently learning <b>Rust</b> and <b>Golang</b>.
         </>,
         <>
             Estou sempre em busca de novos desafios e oportunidades para aprender e aprimorar minhas habilidades. Adoro aprender novas linguagens, frameworks e ferramentas para criar soluções melhores e aprimorar meu conhecimento. Atualmente aprendendo <b>Rust</b> e <b>Golang</b>.
