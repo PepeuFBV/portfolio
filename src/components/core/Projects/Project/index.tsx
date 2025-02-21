@@ -18,6 +18,14 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
 
     const [isGithubLink, setIsGithubLink] = useState<boolean>(false)
 
+    const [hasImage, setHasImage] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (project.picture) {
+            setHasImage(true)
+        }
+    }, [project.picture])
+
     useEffect(() => {
         setIsGithubLink(project.link.startsWith('https://github.com'))
     }, [project.link])
@@ -33,15 +41,17 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
             target='_blank'
             rel='noreferrer'
         >
-            <div className='col-span-4 md:max-lg:col-span-3 relative h-full w-full overflow-hidden rounded-xl'>
+            <div className='col-span-4 md:max-lg:col-span-3 relative h-full w-full overflow-hidden rounded-xl'>{hasImage &&
                 <Image
                     src={project.picture || ''}
                     alt={project.name}
                     fill
                     quality={100}
                     loading='lazy'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='w-full object-cover'
                 />
+            }
             </div>
             <div className='col-span-8 md:max-lg:col-span-9 flex flex-col justify-between mb-1 gap-2 lg:gap-0'>
                 <div className='flex flex-col gap-3'>

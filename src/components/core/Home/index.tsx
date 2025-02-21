@@ -24,7 +24,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
                             transition={{ duration: 0.5, delay: 0 }}
                             className='hidden md:block py-1 px-2 bg-zinc-200 dark:bg-zinc-900 rounded-lg'
                         >
-                            <Image src="/pedro.jpg" alt="Logo" width={150} height={150} loading='eager' quality={100} className='rounded-full float-left' />
+                            <Image src="/pedro.jpg" alt="Logo" width={100} height={150} loading='eager' quality={100} priority className='h-auto w-auto rounded-full float-left' />
                         </motion.div>
                         <div className='flex flex-col gap-2 w-full lg:w-1/2'>
                             <motion.h1

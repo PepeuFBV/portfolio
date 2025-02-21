@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { motion, Variants } from 'framer-motion'
 import { cn } from '@/utils/tailwind-merge'
@@ -13,8 +13,11 @@ interface MoveLeftProps {
 }
 const MoveLeft: React.FC<MoveLeftProps> = ({ className = '', size = 24, animate = false, animationVariants }) => {
     const { theme } = useTheme()
+    const [imageLink, setImageLink] = useState<string>('')
 
-    const imageLink: string = theme === 'dark' ? '/icons/move-left.svg' : '/icons/move-left-white.svg'
+    useEffect(() => {
+        setImageLink(theme === 'dark' ? '/icons/move-left.svg' : '/icons/move-left-white.svg')
+    }, [theme])
 
     if (animate) {
         if (!animationVariants) {
