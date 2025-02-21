@@ -37,7 +37,7 @@ const Icons: React.FC<IconsProps> = ({ languagePos = 0 }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: INITIAL_DELAY + DELAY_MULTIPLIER * iterator++ }}
             >
-                <Curriculum size={ICON_SIZE} languagePos={languagePos} />
+                <Curriculum size={ICON_SIZE} />
             </motion.div>
         </div>
     )

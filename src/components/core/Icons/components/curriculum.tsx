@@ -1,13 +1,23 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import { FileText } from 'lucide-react'
-import { getLanguagePos } from '@/utils/language-handler'
+import { useAppContext } from '@/context/context'
 
 interface CurriculumProps {
     size?: number,
-    languagePos?: number
 }
-const Curriculum: React.FC<CurriculumProps> = ({ size = 24, languagePos = 0 }) => {
-    const filepath = `/files/pedro-${languagePos === 0 ? 'pt' : 'en'}.pdf`
+const Curriculum: React.FC<CurriculumProps> = ({ size = 24 }) => {
+    const { languagePos } = useAppContext()
+    const [filepath, setFilepath] = useState<string>('/files/pedro-')
+
+    useEffect(() => {
+        if (languagePos === 0) {
+            setFilepath('/files/pedro-en.pdf')
+        } else {
+            setFilepath('/files/pedro-pt.pdf')
+        }
+    }, [languagePos])
 
     return (
         <a href={filepath} target='_blank'>

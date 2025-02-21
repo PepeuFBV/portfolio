@@ -46,10 +46,10 @@ const aboutme: AboutMeContent = {
     ],
     description3: [
         <>
-            Currently, I'm working as a fullstack software developer and researcher at <a className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' href="https://www.cefetmg.br/" target="_blank" rel="noreferrer">SmartRural</a>, developing a real-time monitoring system for IoT devices in the aquiculture sector.
+            Currently, I'm working as a fullstack software developer and researcher at <a className='underline hover:text-blue-800 visited:text-purple-600' href="https://www.smartrural.com.br" target="_blank" rel="noreferrer">SmartRural</a>, developing a real-time monitoring system for IoT devices in the aquiculture sector.
         </>,
         <>
-            Atualmente, estou trabalhando como desenvolvedor de software fullstack e pesquisador na <a className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600' href="https://www.cefetmg.br/" target="_blank" rel="noreferrer">SmartRural</a>, desenvolvendo um sistema de monitoramento em tempo real para dispositivos IoT no setor de aquicultura.
+            Atualmente, estou trabalhando como desenvolvedor de software fullstack e pesquisador na <a className='underline hover:text-blue-800 visited:text-purple-600' href="https://www.smartrural.com.br" target="_blank" rel="noreferrer">SmartRural</a>, desenvolvendo um sistema de monitoramento em tempo real para dispositivos IoT no setor de aquicultura.
         </>
     ],
     descriptionExtra: [
