@@ -1,11 +1,11 @@
-function loadAssetUrl(originalUrl: string): string {
+function loadPage(link: string): string {
     let url: string = ''
     if (process.env.NEXT_PUBLIC_NODE_ENV === 'production') {
         if (!process.env.NEXT_PUBLIC_BASE_PRODUCTION_URL) throw new Error('NEXT_PUBLIC_BASE_PRODUCTION_URL is not defined')
-        url = url.concat(process.env.NEXT_PUBLIC_BASE_PRODUCTION_URL, originalUrl)
+        url = process.env.NEXT_PUBLIC_BASE_PRODUCTION_URL.concat(link)
         return url
     }
-    return originalUrl
+    return link
 }
 
-export default loadAssetUrl
+export default loadPage

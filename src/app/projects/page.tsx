@@ -8,6 +8,7 @@ import { aboutme } from '@/data/aboutme'
 import { getColumns } from '@/components/core/Projects/DataTable/columns'
 import { motion, Variants } from 'framer-motion'
 import { useAppContext } from '@/context/context'
+import loadPage from '@/utils/page-routing-url'
 
 export default function ProjectsPage() {
     const { languagePos } = useAppContext()
@@ -27,7 +28,7 @@ export default function ProjectsPage() {
                     animate='animate'
                     whileHover='hover'
                     className='w-fit flex items-center justify-center space-x-1'
-                    href="/"
+                    href={loadPage('/')}
                 >
                     <MoveLeft size={24} animate animationVariants={arrowAnimationVariants} className='h-full' />
                     <motion.p
