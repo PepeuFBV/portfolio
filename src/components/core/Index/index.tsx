@@ -1,19 +1,22 @@
 'use client'
 
 import React from 'react'
-import { indexOptions } from '@/data/index-options'
 import { Link } from 'react-scroll'
+import { indexOptions } from '@/data/index-options'
+import { useAppContext } from '@/context/context'
 import { motion } from 'framer-motion'
 import './line.css'
 
 const INITIAL_DELAY = 0.4
 
 const Index = () => {
+    const { languagePos } = useAppContext()
+
     return (
         <nav className='hidden lg:flex flex-col gap-4'>
-            {indexOptions.map((option, index) => (
+            {indexOptions[languagePos].map((option, index) => (
                 <motion.div
-                    key={index}
+                    key={`index` + languagePos + index}
                     initial={{ x: -10, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: INITIAL_DELAY + index * 0.4 }}
