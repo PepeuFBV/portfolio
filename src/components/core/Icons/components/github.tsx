@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import loadAssetUrl from '@/utils/load-asset-url'
 
 interface GithubProps {
     size?: number
@@ -10,13 +11,13 @@ interface GithubProps {
 }
 const Github: React.FC<GithubProps> = ({ size = 24, href = 'https://github.com/PepeuFBV', anchor = true }) => {
     const { theme } = useTheme()
-    const [link, setLink] = useState('/icons/github-mark.svg')
+    const [link, setLink] = useState(loadAssetUrl('/icons/github-mark.svg'))
 
     useEffect(() => {
         if (theme === 'dark') {
-            setLink('/icons/github-mark-white.svg')
+            setLink(loadAssetUrl('/icons/github-mark-white.svg'))
         } else {
-            setLink('/icons/github-mark.svg')
+            setLink(loadAssetUrl('/icons/github-mark.svg'))
         }
     }, [theme])
 

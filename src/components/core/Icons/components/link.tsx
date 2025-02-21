@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { cn } from '@/utils/tailwind-merge'
+import loadAssetUrl from '@/utils/load-asset-url'
 
 interface LinkProps {
     className?: string
@@ -21,8 +22,8 @@ const Link: React.FC<LinkProps> = ({ className = '', size = 24, href }) => {
         return null
     }
 
-    let link: string = '/icons/link-white.svg'
-    if (theme === 'dark') link = '/icons/link.svg'
+    let link: string = loadAssetUrl('/icons/link-white.svg')
+    if (theme === 'dark') link = loadAssetUrl('/icons/link.svg')
 
     if (href) {
         return (
@@ -30,6 +31,7 @@ const Link: React.FC<LinkProps> = ({ className = '', size = 24, href }) => {
                 href={href}
                 target='_blank'
                 rel='noreferrer'
+                className={cn('', className)}
             >
                 <img
                     src={link}

@@ -5,6 +5,7 @@ import { Job } from '@/components/core/Experience/Job'
 import { Link } from '@/components/core/Icons/components/link'
 import { experience as initialExperience } from '@/data/experience'
 import { motion } from 'framer-motion'
+import loadAssetUrl from '@/utils/load-asset-url'
 
 const DELAY_MULTIPLIER = 0.45
 
@@ -57,7 +58,7 @@ const Experience: React.FC<ExperienceProps> = ({ INITIAL_DELAY = 0.0, languagePo
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: INITIAL_DELAY + experience.jobs.length * DELAY_MULTIPLIER }}
                 className='w-fit flex gap-1'
-                href={`/files/pedro-${languagePos === 0 ? 'en' : 'pt'}.pdf`}
+                href={loadAssetUrl(`/files/pedro-${languagePos === 0 ? 'en' : 'pt'}.pdf`)}
                 target='_blank'
                 rel='noreferrer'
             >

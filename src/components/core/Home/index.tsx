@@ -2,11 +2,12 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { Index } from '@/components/core/Index'
 import { Icons } from '@/components/core/Icons'
 import { aboutme } from '@/data/aboutme'
 import { cn } from '@/utils/tailwind-merge'
 import { motion } from 'framer-motion'
-import { Index } from '../Index'
+import loadAssetUrl from '@/utils/load-asset-url'
 
 interface HomeProps {
     className?: string
@@ -24,7 +25,7 @@ const Home: React.FC<HomeProps> = ({ className, languagePos = 0 }) => {
                             transition={{ duration: 0.5, delay: 0 }}
                             className='hidden md:block py-1 px-2 bg-zinc-200 dark:bg-zinc-900 rounded-lg'
                         >
-                            <Image src="/pedro.jpg" alt="Logo" width={140} height={180} loading='eager' quality={100} priority className='rounded-full float-left' />
+                            <Image src={loadAssetUrl('/pedro.jpg')} alt="Pedro Figueira" width={140} height={180} loading='eager' quality={100} priority className='rounded-full float-left' />
                         </motion.div>
                         <div className='flex flex-col gap-2 w-full lg:w-1/2'>
                             <motion.h1

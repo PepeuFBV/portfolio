@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { motion, Variants } from 'framer-motion'
 import { cn } from '@/utils/tailwind-merge'
+import loadAssetUrl from '@/utils/load-asset-url'
 
 interface MoveLeftProps {
     className?: string
@@ -16,7 +17,7 @@ const MoveLeft: React.FC<MoveLeftProps> = ({ className = '', size = 24, animate 
     const [imageLink, setImageLink] = useState<string>('')
 
     useEffect(() => {
-        setImageLink(theme === 'dark' ? '/icons/move-left.svg' : '/icons/move-left-white.svg')
+        setImageLink(theme === 'dark' ? loadAssetUrl('/icons/move-left.svg') : loadAssetUrl('/icons/move-left-white.svg'))
     }, [theme])
 
     if (animate) {

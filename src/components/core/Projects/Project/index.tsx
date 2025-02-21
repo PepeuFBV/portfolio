@@ -7,6 +7,7 @@ import { Link } from '@/components/core/Icons/components/link'
 import type { ProjectData } from '@/types/types'
 import { Date } from '@/components/core/Projects/Project/Date'
 import { motion } from 'framer-motion'
+import loadAssetUrl from '@/utils/load-asset-url'
 
 interface ProjectProps {
     project: ProjectData
@@ -43,7 +44,7 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
         >
             <div className='col-span-4 md:max-lg:col-span-3 relative h-full w-full overflow-hidden rounded-xl'>{hasImage &&
                 <Image
-                    src={project.picture || ''}
+                    src={loadAssetUrl(project.picture || '')}
                     alt={project.name}
                     fill
                     quality={100}
