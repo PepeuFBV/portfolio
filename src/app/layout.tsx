@@ -11,7 +11,7 @@ const poppins = Poppins({ weight: ['100', '200', '300', '400', '500', '600', '70
 
 export const metadata: Metadata = {
     title: "Pedro Figueira",
-    description: "Portfolio de Pedro Figueira",
+    description: "Portfolio de Pedro Figueira, estudante de computação e desenvolvedor fullstack. Aqui você encontra meus projetos, habilidades e informações de contato.",
     authors: {
         url: "https://www.linkedin.com/in/pedrofbv/",
         name: "Pedro Figueira",
