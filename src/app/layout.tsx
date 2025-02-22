@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "https://www.linkedin.com/in/pedrofbv/",
         name: "Pedro Figueira",
     },
-    keywords: "portfolio, Pedro Figueira, web developer, projects",
+    keywords: "portfolio, Pedro Figueira, web developer, fullstack developer, intern, student, estudante, desenvolvedor web, desenvolvedor, estagiario, projects",
     viewport: "width=device-width, initial-scale=1.0",
     robots: "index, follow",
     twitter: {
