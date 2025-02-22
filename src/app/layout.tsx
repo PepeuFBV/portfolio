@@ -11,7 +11,24 @@ const poppins = Poppins({ weight: ['100', '200', '300', '400', '500', '600', '70
 
 export const metadata: Metadata = {
     title: "Pedro Figueira",
-    description: "Portfolio de Pedro Figueira",
+    description: "Portfolio de Pedro Figueira, estudante de computação e desenvolvedor fullstack. Aqui você encontra meus projetos, habilidades e informações de contato.",
+    authors: {
+        url: "https://www.linkedin.com/in/pedrofbv/",
+        name: "Pedro Figueira",
+    },
+    keywords: "portfolio, Pedro Figueira, web developer, fullstack developer, intern, student, estudante, desenvolvedor web, desenvolvedor, estagiario, projects",
+    robots: "index, follow",
+    twitter: {
+        card: "summary_large_image",
+        site: "@pedrofbv",
+        title: "Pedro Figueira",
+        description: "Portfolio de Pedro Figueira",
+    },
+    applicationName: "Pedro Figueira Portfolio",
+    generator: "Next.js",
+    classification: "Portfolio",
+    publisher: "Pedro Figueira",
+    category: "Portfolio",
 }
 
 export default function RootLayout({
@@ -21,6 +38,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en-US" suppressHydrationWarning>
+            <head>
+                <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                <meta name="apple-mobile-web-app-title" content="Pedro Portfolio" />
+                <link rel="manifest" href="/site.webmanifest" />
+            </head>
             <body className={poppins.className}>
                 <ThemeProvider
                     attribute="class"
