@@ -12,6 +12,25 @@ const poppins = Poppins({ weight: ['100', '200', '300', '400', '500', '600', '70
 export const metadata: Metadata = {
     title: "Pedro Figueira",
     description: "Portfolio de Pedro Figueira",
+    authors: {
+        url: "https://www.linkedin.com/in/pedrofbv/",
+        name: "Pedro Figueira",
+    },
+    keywords: "portfolio, Pedro Figueira, web developer, projects",
+    viewport: "width=device-width, initial-scale=1.0",
+    robots: "index, follow",
+    twitter: {
+        card: "summary_large_image",
+        site: "@pedrofbv",
+        title: "Pedro Figueira",
+        description: "Portfolio de Pedro Figueira",
+    },
+    themeColor: "#000000",
+    applicationName: "Pedro Figueira Portfolio",
+    generator: "Next.js",
+    classification: "Portfolio",
+    publisher: "Pedro Figueira",
+    category: "Portfolio",
 }
 
 export default function RootLayout({
