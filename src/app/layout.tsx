@@ -17,7 +17,6 @@ export const metadata: Metadata = {
         name: "Pedro Figueira",
     },
     keywords: "portfolio, Pedro Figueira, web developer, fullstack developer, intern, student, estudante, desenvolvedor web, desenvolvedor, estagiario, projects",
-    viewport: "width=device-width, initial-scale=1.0",
     robots: "index, follow",
     twitter: {
         card: "summary_large_image",
@@ -25,7 +24,6 @@ export const metadata: Metadata = {
         title: "Pedro Figueira",
         description: "Portfolio de Pedro Figueira",
     },
-    themeColor: "#000000",
     applicationName: "Pedro Figueira Portfolio",
     generator: "Next.js",
     classification: "Portfolio",
