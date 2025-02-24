@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pedro's Portfolio
 
-## Getting Started
+My personal portfolio, showcasing my experience, projects and skills.
 
-First, run the development server:
+## Table of Contents
+
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Building and Deploying](#building-and-deploying)
+- [Features](#features)
+- [License](#license)
+
+## Technologies
+
+- HTML5, CSS3 and JavaScript for basic front-end development.
+- ReactJS for component-based front-end development.
+- NextJS for server-side rendering and static site generation.
+- TypeScript for static type-checking.
+- TailwindCSS for utility-first CSS.
+- Framer Motion for animations.
+- TanStack tables for responsive tables for project list.
+- Vercel for deployment.
+
+## Setup
+
+To run this project, install it from GitHub:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/PepeuFBV/portfolio.git
+cd portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+$ npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run the development server:
 
-## Learn More
+```bash
+$ npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will start the development server locally at `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Building and Deploying
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To build the project for production, run:
 
-## Deploy on Vercel
+```bash
+$ npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This will generate a `build` folder with the production-ready files. You may then deploy this folder to your server.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Features
+
+- **Home**: A brief introduction about me.
+- **About**: A more detailed description about me.
+- **Experience**: A list of my professional experience.
+- **Projects**: A list of my personal projects.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
