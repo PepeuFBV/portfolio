@@ -11,7 +11,7 @@ const githubLink = 'https://github.com/PepeuFBV/portfolio'
 
 const footerText: ReactNode[] = [
     [
-        <div className='text-start flex flex-col gap-2'>
+        <div key='en' className='text-start flex flex-col gap-2'>
             <div className='text-start flex flex-col'>
                 <p key="en-1">Deployed on <span className='font-semibold dark:text-white'>Vercel</span>.</p>
                 <p key="en-2">Designed with <span className='font-semibold dark:text-white'>Figma</span>, built in <span className='font-semibold dark:text-white'>NextJS</span> with <span className='font-semibold dark:text-white'>React</span>, <span className='font-semibold dark:text-white'>Typescript</span> and <span className='font-semibold dark:text-white'>TailwindCSS</span>.</p>
@@ -24,7 +24,7 @@ const footerText: ReactNode[] = [
         </div>
     ],
     [
-        <div className='text-start flex flex-col gap-2'>
+        <div key='pt' className='text-start flex flex-col gap-2'>
             <div className='text-start flex flex-col'>
                 <p key="pt-1">Deployado no <span className='font-semibold dark:text-white'>Vercel</span>.</p>
                 <p key="pt-2">Design feito com o <span className='font-semibold dark:text-white'>Figma</span>, construído em <span className='font-semibold dark:text-white'>NextJS</span> com programação em <span className='font-semibold dark:text-white'>React</span>, <span className='font-semibold dark:text-white'>Typescript</span> e <span className='font-semibold dark:text-white'>TailwindCSS</span>.</p>
