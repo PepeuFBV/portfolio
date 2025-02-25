@@ -31,7 +31,7 @@ const footerText: ReactNode[] = [
                 <p key="pt-3"><span className='font-semibold dark:text-white'>Poppings</span> é a fonte.</p>
             </div>
             <a className='w-fit flex gap-2 items-center' href={githubLink} target='_blank' rel='noreferrer'>
-                <Button variant='link' className='relative z-10 dark:text-zinc-500 h-auto p-0'>Veja este projeto no Github</Button>
+                <Button variant='link' className='dark:text-zinc-500 h-auto p-0'>Veja este projeto no Github</Button>
                 <Github anchor={false} href={githubLink} size={16} />
             </a>
         </div>
