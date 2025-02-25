@@ -15,10 +15,10 @@ export default function Main() {
 
     return (
         <main className="flex flex-col lg:flex-row h-screen w-full items-center mt-10 md:mt-0 lg:px-20 xl:px-32 py-20 lg:py-36 gap-36">
-            <div className='lg:fixed lg:w-1/2 lg:-z-10 h-full lg:pb-16 lg:pt-32 mx-5 md:mx-2 lg:mx-0'>
-                <Home className='h-full' languagePos={languagePos} />
+            <div className='lg:fixed w-full lg:w-1/2 lg:-z-10 h-full lg:pb-16 lg:pt-32 mx-5 md:mx-2 lg:mx-0'>
+                <Home className='h-full mx-4 md:mx-0' languagePos={languagePos} />
             </div>
-            <div className="lg:w-1/2 mx-8 lg:ml-auto h-full flex flex-col gap-20 lg:mt-40 scroll-my-10">
+            <div className="lg:w-1/2 mx-4 lg:ml-auto h-full flex flex-col gap-20 lg:mt-40 scroll-my-10">
                 <AboutMe INITIAL_DELAY={INITIAL_DELAY} languagePos={languagePos} />
                 <Experience INITIAL_DELAY={INITIAL_DELAY + 0.8} languagePos={languagePos} />
                 <Projects INITIAL_DELAY={INITIAL_DELAY + 3.8} languagePos={languagePos} />
