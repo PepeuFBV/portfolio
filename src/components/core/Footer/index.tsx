@@ -7,7 +7,7 @@ import '@/components/core/Footer/loading.css'
 
 const FooterText: ReactNode[][] = [
     [
-        <p key="en-1">Deployed in <span className='font-semibold dark:text-white'>Vercel</span>.</p>,
+        <p key="en-1">Deployed on <span className='font-semibold dark:text-white'>Vercel</span>.</p>,
         <p key="en-2">Designed with <span className='font-semibold dark:text-white'>Figma</span>, built in <span className='font-semibold dark:text-white'>NextJS</span> with <span className='font-semibold dark:text-white'>React</span>, <span className='font-semibold dark:text-white'>Typescript</span> and <span className='font-semibold dark:text-white'>TailwindCSS</span>.</p>,
         <p key="en-3"><span className='font-semibold dark:text-white'>Poppings</span> is the font.</p>
     ],
@@ -38,6 +38,7 @@ const Footer: React.FC<FooterProps> = ({ className, INITIAL_DELAY = 0.0, languag
                 {FooterText[languagePos][2]}
             </motion.div>
             <motion.div
+                key={`footer-loader-${languagePos}`}
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: INITIAL_DELAY }}
