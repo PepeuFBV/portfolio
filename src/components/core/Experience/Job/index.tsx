@@ -21,7 +21,7 @@ const Job: React.FC<JobProps> = ({ job, DELAY = 0.0, languagePos = 0 }) => {
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: DELAY }}
-            className='flex flex-col lg:flex-row gap-3 hover:bg-zinc-300 dark:hover:bg-zinc-900 hover:bg-opacity-15 dark:hover:shadow p-3 rounded-xl min-h-40 max-h-48'
+            className='flex flex-col lg:flex-row gap-3 hover:bg-zinc-300 dark:hover:bg-zinc-900 hover:bg-opacity-15 dark:hover:shadow p-3 rounded-xl md:min-h-40 md:max-h-48'
         >
             <Dates dates={job.date} languagePos={languagePos} />
             <div className='flex flex-col justify-between mb-1 w-full gap-2 lg:gap-0'>
