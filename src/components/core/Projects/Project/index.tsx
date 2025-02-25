@@ -37,12 +37,12 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: DELAY }}
-            className='grid grid-cols-12 gap-3 hover:bg-slate-700 hover:bg-opacity-15 hover:shadow p-3 rounded-xl min-h-40 max-h-48'
+            className='flex flex-col md:grid md:grid-cols-12 md:gap-3 hover:bg-slate-700 hover:bg-opacity-15 hover:shadow p-3 rounded-xl md:min-h-40 md:max-h-48'
             href={project.link}
             target='_blank'
             rel='noreferrer'
         >
-            <div className='col-span-4 md:max-lg:col-span-3 relative h-full w-full overflow-hidden rounded-xl'>{hasImage &&
+            <div className='hidden md:block md:col-span-4 md:max-lg:col-span-3 relative h-full w-full overflow-hidden rounded-xl'>{hasImage &&
                 <Image
                     src={loadAssetUrl(project.picture || '')}
                     alt={project.name}
@@ -54,7 +54,7 @@ const Project: React.FC<ProjectProps> = ({ project, DELAY = 0.0, languagePos = 0
                 />
             }
             </div>
-            <div className='col-span-8 md:max-lg:col-span-9 flex flex-col justify-between mb-1 gap-2 lg:gap-0'>
+            <div className='md:col-span-8 md:max-lg:col-span-9 flex flex-col justify-between mb-1 gap-2 lg:gap-0'>
                 <div className='flex flex-col gap-3'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='h-full flex gap-2'>
