@@ -46,4 +46,10 @@ type IndexOption = {
     link: string;
 }
 
-export type { ProjectsT, ProjectData, Job, DateRange, MonthYear, IndexOption }
+type NotFoundContent = {
+    title: string[];
+    description: string[];
+    buttonText: string[];
+}
+
+export type { ProjectsT, ProjectData, Job, DateRange, MonthYear, IndexOption, NotFoundContent }
