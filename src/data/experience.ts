@@ -4,7 +4,7 @@ interface ExperienceContent {
     title: string[],
     jobs: Job[]
 }
-const experience: ExperienceContent =  {
+const experience: ExperienceContent = {
     title: [
         'Experience',
         'Experiência'
@@ -187,8 +187,8 @@ const experience: ExperienceContent =  {
         {
             id: 6,
             title: [
-                'Marketing Analyst',
-                'Analista de Marketing'
+                'Project Analyst',
+                'Analista de Projetos'
             ],
             company: [
                 'Seed a Bit - UFRPE',
@@ -197,8 +197,8 @@ const experience: ExperienceContent =  {
             companyLink: 'https://www.seedabit.org.br',
             projectLink: null,
             description: [
-                'Marketing Analyst at the Seed a Bit startup, in which I developed skills in digital marketing, content creation and social media management.',
-                'Analista de Marketing na startup Seed a Bit, em que desenvolvi habilidades em marketing digital, criação de conteúdo e gerenciamento de redes sociais.'
+                'Project Analyst at Seed a Bit, UFRPE junior company, contributing to large-scale projects in web development, backend, frontend, and API development. Demonstrated proficiency in Git for seamless team collaboration, and effectively utilized DevOps tools and practices for continuous integration and deployment, ensuring efficient and high-quality project outcomes.',
+                'Analista de Projetos na empresa júnior Seed a Bit da UFRPE, participando de projetos de larga escala nas áreas de desenvolvimento web, backend, frontend e APIs. Demonstração de proficiência no uso do Git para colaboração eficaz em equipe, utilizando ferramentas e práticas de DevOps para integração e implantação contínuas, garantindo resultados de projeto eficientes e de alta qualidade.'
             ],
             date: {
                 start: {
@@ -208,8 +208,8 @@ const experience: ExperienceContent =  {
                 end: null
             },
             tags: [
-                ['Digital Marketing', 'Social Media', 'Analytics', 'Client Prospecting'],
-                ['Marketing Digital', 'Redes Sociais', 'Análise de Dados', 'Prospecção de Clientes']
+                ['ReactJS', 'NodeJS', 'Express', 'Git', 'DevOps'],
+                ['ReactJS', 'NodeJS', 'Express', 'Git', 'DevOps']
             ]
         }
     ]
