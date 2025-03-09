@@ -53,7 +53,7 @@ export default function RootLayout({
                     enableSystem
                 >
                     <AppProvider>
-                        <div className='fixed right-0 top-0 mt-10 mr-10 flex flex-col lg:flex-row items-end gap-4'>
+                        <div className='fixed right-4 top-4 flex flex-col lg:flex-row items-end gap-4'>
                             <LanguageSwitch />
                             <ModeToggle />
                         </div>
