@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const ModeToggleIcons = () => {
     const { theme } = useTheme()
 
-    const raysVariants = {
+    const raysVariants: any = {
         hidden: {
             strokeOpacity: 0,
             transition: {
@@ -21,7 +21,7 @@ const ModeToggleIcons = () => {
         },
     }
 
-    const rayVariant = {
+    const rayVariant: any = {
         hidden: {
             pathLength: 0,
             opacity: 0,
@@ -41,7 +41,7 @@ const ModeToggleIcons = () => {
         },
     }
 
-    const shineVariant = {
+    const shineVariant: any = {
         hidden: {
             opacity: 0,
             scale: 2,
