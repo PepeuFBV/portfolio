@@ -1,0 +1,78 @@
+name: PR checks
+
+on:
+    pull_request:
+        branches:
+            - dev
+            - main
+
+jobs:
+    lint:
+        name: Lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use Node.js 20 (with npm cache)
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+                  cache: "npm"
+                  cache-dependency-path: "package-lock.json"
+
+            - name: Install dependencies
+              run: |
+                  if [ -f package-lock.json ]; then npm ci --prefer-offline --no-audit --progress=false; else npm install --no-audit --progress=false; fi
+
+            - name: Run linter
+              run: npm run lint
+
+    typecheck:
+        name: Typecheck
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use Node.js 22 (with npm cache)
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+                  cache: "npm"
+                  cache-dependency-path: "package-lock.json"
+
+            - name: Install dependencies
+              run: |
+                  if [ -f package-lock.json ]; then npm ci --prefer-offline --no-audit --progress=false; else npm install --no-audit --progress=false; fi
+
+            - name: Typecheck (tsc)
+              run: npx tsc --noEmit
+
+    build:
+        name: Build
+        needs: [lint, typecheck]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use Node.js 20 (with npm cache)
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+                  cache: "npm"
+                  cache-dependency-path: "package-lock.json"
+
+            - name: Cache Next.js build cache
+              uses: actions/cache@v4
+              with:
+                  path: .next/cache
+                  key: ${{ runner.os }}-next-cache-${{ hashFiles('package-lock.json') }}
+
+            - name: Install dependencies
+              run: |
+                  if [ -f package-lock.json ]; then npm ci --prefer-offline --no-audit --progress=false; else npm install --no-audit --progress=false; fi
+
+            - name: Build
+              run: npm run build
